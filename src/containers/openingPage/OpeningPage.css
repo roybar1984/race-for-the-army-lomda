@@ -1,3 +1,36 @@
+.titles-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: -5vh;
+  height: 30vh;
+}
+
+.opening-titles {
+  font-family: title;
+}
+
+.opening-title1 {
+  font-size: 9vw;
+  /* margin-top: 5vh; */
+}
+
+.opening-title2 {
+  font-size: 5vw;
+  margin-top: 0;
+}
+
+.btns {
+  width: 16vw;
+  height: 5vh;
+  border-radius: 3em;
+  font-size: 2.5vw;
+  cursor: pointer;
+}
+
+.start-lomda-btn {
+  margin-bottom: 20vh;
+}
+
 @media only screen and (max-width: 690px) {
   .titles-container {
     display: flex;

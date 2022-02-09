@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./OpeningPage.css";
 import { gsap } from "gsap";
 import Button from "../../components/Button/Button";
+import { Markup } from "interweave";
 
 function OpeningPage(props) {
   const titlesContainerRef = useRef(null);
@@ -47,6 +48,9 @@ function OpeningPage(props) {
         "+=0.5"
       );
   }, []);
+
+  function handleStartLomda(event) {}
+
   return (
     <>
       <div ref={titlesContainerRef} className="titles-container">
@@ -56,8 +60,15 @@ function OpeningPage(props) {
         <h3 ref={title2} className="opening-titles opening-title2">
           המירוץ לצה״ל
         </h3>
+        {/* <p>
+          <Markup content={props.Data[2].bubbleText1} />
+        </p> */}
       </div>
-      <button ref={openingBtn} className="btns start-lomda-btn">
+      <button
+        onClick={handleStartLomda}
+        ref={openingBtn}
+        className="btns start-lomda-btn"
+      >
         בואו נתחיל
       </button>
       {/* <Button ref={openingBtn} /> */}

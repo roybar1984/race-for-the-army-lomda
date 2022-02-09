@@ -12,6 +12,11 @@
   /* border: solid pink; */
   height: 100vh;
   overflow: hidden;
+  direction: rtl;
+}
+
+.bold-text {
+  font-weight: 800;
 }
 
 @media only screen and (max-width: 690px) {

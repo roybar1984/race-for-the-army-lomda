@@ -1,0 +1,28 @@
+.bubble-title {
+  font-weight: 900;
+  color: rgb(133, 93, 5);
+  margin-top: -0.2vh;
+}
+
+.speech-bubble {
+  position: relative;
+  background: #a5eaf0b6;
+  /* border-radius: 0.4em; */
+  border-radius: 2rem;
+  width: 60vw;
+  padding: 1.125em 1.5em;
+}
+
+.speech-bubble:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 39px solid transparent;
+  border-top-color: #a5eaf0b6;
+  border-bottom: 0;
+  margin-left: -39px;
+  margin-bottom: -39px;
+}

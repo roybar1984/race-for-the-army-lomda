@@ -3,6 +3,7 @@ import "./OpeningPage.css";
 import { gsap } from "gsap";
 import Button from "../../components/Button/Button";
 import { Markup } from "interweave";
+import { Link } from "react-router-dom";
 
 function OpeningPage(props) {
   const titlesContainerRef = useRef(null);
@@ -64,13 +65,15 @@ function OpeningPage(props) {
           <Markup content={props.Data[2].bubbleText1} />
         </p> */}
       </div>
-      <button
-        onClick={handleStartLomda}
-        ref={openingBtn}
-        className="btns start-lomda-btn"
-      >
-        בואו נתחיל
-      </button>
+      <Link to={"/intro"}>
+        <button
+          onClick={handleStartLomda}
+          ref={openingBtn}
+          className="btns start-lomda-btn"
+        >
+          בואו נתחיל
+        </button>
+      </Link>
       {/* <Button ref={openingBtn} /> */}
     </>
   );

@@ -5,7 +5,7 @@
     },
     {
         "index": 1,
-        "bubbleTitle": "בורכים הבאים למירוץ לצה״לֹ",
+        "bubbleTitle": "ברוכים הבאים למירוץ לצה״לֹ",
         "bubbleText1": "מפקדת קצין חינוך ראשי בשיתוף עם יחידת המורשת והמוזיאונים של משרד הביטחון יצרו עבורכם <span class='bold-text'>\"שביל משימות אתגרי\" </span> ובו חמישה אתרים בעלי תוכן היסטורי.<br> אני אהיה המדריך הוירטואלי שלכם ואלווה אתכם באתרים השונים.",
         "bubbleText2":"בכל אתר תתודעו לטפח מסיפור התפתחות כוחות המגן והמחתרות מהן הורכב צה״לֹ. בכל אתר תקבלו משימה שתוביל אתכם לנקוה הבאה."
     },
@@ -19,24 +19,21 @@
     {
         "index": 3,
         "title": "תחנה 1 - אנדרטת המייסדים",
-        "text": "קיימים סוגים רבים של אירועים. <br> בלומדה שלנו נתמקד בשלושה סוגים מרכזיים: <br><br><span class='colored-text'>אירועי עכבר<span class='colored-text'>, input וטעינה.</span>"
+        "bubbleText1":"האנדרטה למייסדי העיר תל אביב הוקמה בשנת 1949. היא נמצאת בנקודה הסמלית שבה נערכה <span class='bold-text'>הגרלת המגרשים ההיסטורית</span> (אפריל 1909).",
+        "bubbleText2":"הגרלה זו נועדה לחלק באופן שוויוני את הקרקע בין 66 המשפחות המייסדות של העיר העברית הראשונה: <span class='bold-text'>תל אביב</span>.",
+        "btnText":"בואו נמשיך"
     },
     {
         "index": 4,
-        "title": "אירועי עכבר",
-        "text": [
-            "<span class='colored-text'>אירוע עכבר</span> - אירוע שקורה בכל פעם שאנחנו משתמשים בעכבר המחשב. <br> נתמקד בשישה מהאירועים המרכזיים והשימושיים ביותר: <br>",
-            "<span class='colored-text'>mousemove </span>(תזוזת עכבר מעל)​ <br>",
-            "<span class='colored-text'>mousedown </span>(לחיצה)​ <br>",
-            "<span class='colored-text'>mouseout </span>(יציאת עכבר)​ <br>",
-            "<span class='colored-text'>mouseup </span>(שחרור)​ <br>",
-            "<span class='colored-text'>click </span>(לחיצה ושחרור)​ <br>",
-            "<span class='colored-text'>mouseover </span>(עכבר מעל)​ <br>"
-        ]
+        "title": "תחנה 1 - אנדרטת המייסדים",
+        "bubbleText1":"בצידה האחורי של אנדרטה תבליט ובו שלוש שכבות המציגות <span class='bold-text'>שלושה שלבים בהתפתחות העיר</span>. בצידה הקדמי חקוקים שמות המייסדים של תל אביב.",
+        "bubbleText2":"מרגישים מוכנים למשימה הראשונה?",
+        "btnText":"למשימה",
+        "btnText2":"בחזרה להסבר"
     },
     {
         "index": 5,
-        "title": "אירועי עכבר",
+        "title": "תחנה 1 - אנדרטת המייסדים",
         "text": "<span class='colored-text mousedown-color'> mousedown </span>(לחיצה) - מתרחש כאשר המשתמש <br> לוחץ על העכבר.<br><br><span class='colored-text mouseup-color'>mouseup </span>(שחרור) - מתרחש כאשר המשתמש <br>משחרר את כפתור העכבר. <br><br><span class='colored-text click-color'>click </span>(לחיצה ושחרור) - מתרחש בכל פעם <br>שכפתור העכבר נלחץ ומשתחרר. <br> כלומר, מורכב מאירועי MouseDown ו-MouseUp יחד. "
     },
     {

@@ -12,6 +12,7 @@ function IntroPage(props) {
         title={props.Data[1].bubbleTitle}
       />
       <SpeechBubble text={props.Data[1].bubbleText2} />
+      <div className="next-btn"></div>
       {/* <Button text={props.Data[1].btnText} /> */}
     </div>
   );

@@ -1,28 +1,100 @@
-.bubble-title {
-  font-weight: 900;
-  color: rgb(133, 93, 5);
-  margin-top: -0.2vh;
-}
+/* .speech-bubble {
+  background: #a5eaf0b6;
+  border-radius: 5rem;
+  width: 40vw;
+  height: 30vh;
+  padding: 1.125em 1.5em;
+} */
 
 .speech-bubble {
   position: relative;
   background: #a5eaf0b6;
-  /* border-radius: 0.4em; */
-  border-radius: 2rem;
-  width: 60vw;
-  padding: 1.125em 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25rem;
+  width: 50vw;
+  /* padding: 1.125em 1.5em; */
+  height: 30vh;
 }
 
 .speech-bubble:after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -70px;
   left: 50%;
   width: 0;
-  height: 0;
-  border: 39px solid transparent;
+  height: 8px;
+  border: 105px solid transparent;
   border-top-color: #a5eaf0b6;
   border-bottom: 0;
   margin-left: -39px;
-  margin-bottom: -39px;
+  margin-bottom: -38px;
+}
+
+.bubble-text {
+  width: 80%;
+  margin: 0;
+  text-align: center;
+  font-size: 2vw;
+}
+
+.bubble-title {
+  font-weight: 900;
+  font-size: 2.5vw;
+  color: rgb(133, 93, 5);
+  margin-top: -0.2vh;
+  width: 80%;
+}
+
+@media only screen and (max-width: 690px) {
+  .bubble-title {
+    font-weight: 900;
+    color: rgb(133, 93, 5);
+    margin-top: -0.2vh;
+    width: 80%;
+  }
+
+  .speech-bubble {
+    position: relative;
+    background: #a5eaf0b6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 0.4em; */
+    border-radius: 5rem;
+    width: 60vw;
+    padding: 1.5em 1.5em;
+  }
+
+  .bubble-text {
+    width: 93%;
+    margin: 0;
+    margin-top: -1vh;
+    font-size: 4.5vw;
+  }
+
+  .bubble-title {
+    font-weight: 900;
+    font-size: 5vw;
+    color: rgb(133, 93, 5);
+    margin-top: 0.2vh;
+    width: 90%;
+  }
+
+  .speech-bubble:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 39px solid transparent;
+    border-top-color: #a5eaf0b6;
+    border-bottom: 0;
+    margin-left: -39px;
+    margin-bottom: -39px;
+  }
 }

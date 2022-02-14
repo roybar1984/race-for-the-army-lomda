@@ -9,7 +9,9 @@ function SpeechBubble(props) {
       <p className="bubble-title">
         <Markup content={props.title} />
       </p>
-      <Markup content={props.text} />
+      <p className="bubble-text">
+        <Markup content={props.text} />
+      </p>
     </div>
   );
 }

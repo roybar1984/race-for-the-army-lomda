@@ -33,8 +33,8 @@
     },
     {
         "index": 5,
-        "title": "תחנה 1 - אנדרטת המייסדים",
-        "text": "<span class='colored-text mousedown-color'> mousedown </span>(לחיצה) - מתרחש כאשר המשתמש <br> לוחץ על העכבר.<br><br><span class='colored-text mouseup-color'>mouseup </span>(שחרור) - מתרחש כאשר המשתמש <br>משחרר את כפתור העכבר. <br><br><span class='colored-text click-color'>click </span>(לחיצה ושחרור) - מתרחש בכל פעם <br>שכפתור העכבר נלחץ ומשתחרר. <br> כלומר, מורכב מאירועי MouseDown ו-MouseUp יחד. "
+        "title": "תחנה 1 - <br>אנדרטת המייסדים",
+        "text": "הביטו ברשימת המייסדים של תל אביב.<br> לחצו על כל אחת מהתיבות שלמטה. בכל לחיצה תופיע <span class='bold-text'>חידה </span> שעליכם לפתור.<br>על כל חידה שתפתרו תקבלו <span class='bold-text'>אות</span>, אותה עליכם להקליד בתיבה המתאימה. <br>בסיום הקלדת כל האותיות תקבלו את <span class='bold-text'>המיקום הבא במירוץ</span>! <br><br>אם אתם לא יודעים את התשובה לחידה, תוכלו ללחוץ על <span class='hint-icon'> </span> שיחשוף בפניכם רמז."
     },
     {
         "index": 6,

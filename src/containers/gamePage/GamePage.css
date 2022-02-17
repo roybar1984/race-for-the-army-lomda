@@ -2,18 +2,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(132, 232, 232, 0.858);
 }
 .game-title {
   position: relative;
+  width: 90%;
+  /* margin-top: -15vh; */
 }
 
 .text-container {
   width: 85%;
   height: 30vh;
-  border: solid blue;
+  border: solid #0000ff;
   border-radius: 3rem;
   padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -9vh;
+  position: relative;
+  bottom: 3vh;
 }
 
 .text-paragrapgh {
@@ -25,7 +37,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 70%;
+  margin: 0;
+  position: relative;
+  bottom: 8vh;
+  /* margin-top: 7vh; */
+  /* margin-bottom: 10vh; */
 }
 
 .letters-row {
@@ -34,11 +51,31 @@
   align-items: center;
   width: 35vw;
   justify-content: space-around;
-  /* border: solid red; */
+  /* border: solid rgb(21, 255, 0); */
+}
+
+.low-row-letters {
+  margin-right: 1vw;
+  margin-top: 2vh;
+  position: relative;
+  top: 1vh;
 }
 
 .letter-input {
-  width: 5vw;
+  width: 4.5vw;
   height: 4vh;
   padding: 0.3em;
+  margin-left: 4vw;
+  font-size: 7vw;
+  border-radius: 0.3rem;
+  display: flex;
+  text-align: center;
+}
+
+.hint-icon {
+  width: 2vw;
+  height: 2vh;
+  display: inline-block;
+  background-color: yellow;
+  background-size: 100% 100%;
 }

@@ -7,14 +7,16 @@
   width: 100vw;
   background-color: rgba(132, 232, 232, 0.858);
 }
+
 .game-title {
   position: relative;
+  font-size: 4vw;
   width: 90%;
+  top: -5vh;
   /* margin-top: -15vh; */
 }
-
 .text-container {
-  width: 85%;
+  width: 45%;
   height: 30vh;
   border: solid #0000ff;
   border-radius: 3rem;
@@ -25,11 +27,21 @@
   justify-content: center;
   margin-top: -9vh;
   position: relative;
-  bottom: 3vh;
+  bottom: 7vh;
+  height: fit-content;
 }
 
 .text-paragrapgh {
   width: 95%;
+  font-size: 1.5vw;
+}
+
+.hint-icon {
+  width: 2vw;
+  height: 2vh;
+  display: inline-block;
+  background-color: yellow;
+  background-size: 100% 100%;
 }
 
 .letter-container {
@@ -49,33 +61,103 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 35vw;
+  /* width: 35vw; */
   justify-content: space-around;
   /* border: solid rgb(21, 255, 0); */
 }
 
 .low-row-letters {
-  margin-right: 1vw;
+  /* margin-right: 1vw; */
   margin-top: 2vh;
   position: relative;
   top: 1vh;
 }
 
 .letter-input {
-  width: 4.5vw;
+  width: 1vw;
   height: 4vh;
-  padding: 0.3em;
-  margin-left: 4vw;
-  font-size: 7vw;
-  border-radius: 0.3rem;
+  padding: 0.5em;
+  margin-left: 2vw;
+  font-size: 2vw;
+  border-radius: 1.5rem;
   display: flex;
   text-align: center;
 }
 
-.hint-icon {
-  width: 2vw;
-  height: 2vh;
-  display: inline-block;
-  background-color: yellow;
-  background-size: 100% 100%;
+@media only screen and (max-width: 690px) {
+  .game-title {
+    position: relative;
+    width: 90%;
+    font-size: 9vw;
+    /* margin-top: -15vh; */
+  }
+
+  .text-container {
+    width: 78%;
+    height: 30vh;
+    border: solid #0000ff;
+    border-radius: 3rem;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -9vh;
+    position: relative;
+    bottom: 8vh;
+    height: fit-content;
+  }
+
+  .text-paragrapgh {
+    width: 95%;
+    font-size: 5vw;
+  }
+
+  .letter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin: 0;
+    position: relative;
+    bottom: 13vh;
+    /* margin-top: 7vh; */
+    /* margin-bottom: 10vh; */
+  }
+
+  .letters-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 35vw;
+    justify-content: space-around;
+    /* border: solid rgb(21, 255, 0); */
+  }
+
+  .low-row-letters {
+    margin-right: 1vw;
+    margin-top: 2vh;
+    position: relative;
+    top: 1vh;
+  }
+
+  .letter-input {
+    width: 4.5vw;
+    height: 4vh;
+    padding: 0.3em;
+    margin-left: 4vw;
+    font-size: 7vw;
+    border-radius: 0.3rem;
+    display: flex;
+    text-align: center;
+  }
+
+  .hint-icon {
+    width: 3vw;
+    height: 3vh;
+    display: inline-block;
+    background-color: yellow;
+    background-size: 100% 100%;
+  }
 }

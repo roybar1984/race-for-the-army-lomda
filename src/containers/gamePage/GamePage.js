@@ -79,6 +79,7 @@ function GamePage(props) {
   });
 
   const [currText, setCurrText] = useState(props.text);
+  const [isInfoShowed, setIsInfoShowed] = useState(true);
   // const [isCorrect, setIsCorrect] = "";
 
   // const handleChange = (id, event) => {
@@ -88,10 +89,12 @@ function GamePage(props) {
 
   useEffect(() => {
     setCurrText(currLetter.question);
+    setIsInfoShowed(false);
   }, [currLetter]);
 
   useEffect(() => {
     setCurrText(props.text);
+    setIsInfoShowed(true);
   }, []);
 
   const handleChange0 = (event) => {
@@ -120,6 +123,10 @@ function GamePage(props) {
     setCurrText(currLetter.question);
   };
 
+  const handleShowInfo = (event) => {
+    console.log("show-info clicked");
+  };
+
   return (
     <div className="game-page-container">
       <h1 className="game-title">
@@ -127,11 +134,28 @@ function GamePage(props) {
         <Markup content={props.title} />
       </h1>
       <div className="text-container">
+        <div
+          className={`info-icon ${
+            !isInfoShowed ? "display-btn" : "hint-icon-hidden "
+          }`}
+          // className="info-icon"
+          onClick={handleShowInfo}
+        ></div>
         <p className="text-paragrapgh">
           {/* <Markup content={props.text} /> */}
           <Markup content={currText} />
         </p>
+        <div
+          className={`hint-icon ${
+            !isInfoShowed ? "display-btn" : "hint-icon-hidden "
+          }`}
+        ></div>
       </div>
+      {/* <div className="hint-container">
+        <h1 className="game-title hint-title">רמז</h1>
+        <div className="close-hint-btn"></div>
+        <p className="text-paragrapgh hint-text">{currLetter.hint}</p>
+      </div> */}
       <div className="letter-container">
         <div className="letters-row top-row-letters">
           {/* <InputField /> */}

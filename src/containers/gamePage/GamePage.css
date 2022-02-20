@@ -114,6 +114,7 @@
     position: relative;
     bottom: 8vh;
     height: fit-content;
+    min-height: 30vh;
   }
 
   .text-paragrapgh {

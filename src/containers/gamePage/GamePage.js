@@ -60,7 +60,7 @@ function GamePage(props) {
       id: 8,
     },
   ];
-  const arrAnswers = ["ב", "י", "ת", "ג", "ו", "ל", "ו", "מ", "ב"];
+  // const arrAnswers = ["ב", "י", "ת", "ג", "ו", "ל", "ו", "מ", "ב"];
 
   const [ans0, setAns0] = useState("");
   const [ans1, setAns1] = useState("");
@@ -97,8 +97,8 @@ function GamePage(props) {
       setCurrText(props.text);
       setIsInfoShowed(true);
     },
-    [],
-    props.text
+    [props.text]
+    // props.text
   );
 
   useEffect(() => {

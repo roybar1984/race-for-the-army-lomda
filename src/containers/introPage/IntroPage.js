@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import "./IntroPage.css";
-import { gsap } from "gsap";
+// import { gsap } from "gsap";
 import SpeechBubble from "../../components/speechBubble/SpeechBubble";
-import { Markup } from "interweave";
+// import { Markup } from "interweave";
 
 function IntroPage(props) {
   return (

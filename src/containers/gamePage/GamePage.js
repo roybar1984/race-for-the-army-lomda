@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./GamePage.css";
 import { Markup } from "interweave";
-import InputField from "../../components/inputField/InputField";
+// import InputField from "../../components/inputField/InputField";
 
 function GamePage(props) {
   const arrLetters = [
@@ -90,14 +90,12 @@ function GamePage(props) {
   useEffect(() => {
     setCurrText(currLetter.question);
     setIsInfoShowed(false);
-    console.log(isInfoShowed);
   }, [currLetter]);
 
   useEffect(
     () => {
       setCurrText(props.text);
       setIsInfoShowed(true);
-      console.log(isInfoShowed);
     },
     [],
     isInfoShowed
@@ -107,24 +105,8 @@ function GamePage(props) {
     if (isInfoShowed === true) {
       setCurrText(props.text);
       setIsInfoShowed(true);
-      console.log(isInfoShowed);
     }
   }, [isInfoShowed]);
-
-  const handleChange0 = (event) => {
-    setAns0(event.target.value);
-    if (ans0 === arrAnswers[0]) {
-      event.target.addClass = "correct";
-    }
-  };
-
-  const handleChange1 = (event) => {
-    setAns1(event.target.value);
-  };
-
-  const handleChange2 = (event) => {
-    setAns2(event.target.value);
-  };
 
   const handleShowQuestion = (id) => {
     setCurrLetter({
@@ -135,16 +117,6 @@ function GamePage(props) {
     });
     console.log(currLetter);
     setCurrText(currLetter.question);
-  };
-
-  const handleShowInfo = (event) => {
-    setIsInfoShowed(true);
-    // if (isInfoShowed === true) {
-    //   setIsInfoShowed(false);
-    // } else {
-    //   setIsInfoShowed(true);
-    // }
-    // console.log(isInfoShowed);
   };
 
   const handleShowHint = (event) => {
@@ -162,10 +134,9 @@ function GamePage(props) {
           className={`info-icon ${
             !isInfoShowed ? "display-btn" : "hint-icon-hidden "
           }`}
-          onClick={handleShowInfo}
+          onClick={() => setIsInfoShowed(true)}
         ></div>
         <p className="text-paragrapgh">
-          {/* <Markup content={props.text} /> */}
           <Markup content={currText} />
         </p>
         <div

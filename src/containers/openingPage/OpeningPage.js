@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import "./OpeningPage.css";
 import { gsap } from "gsap";
-import Button from "../../components/Button/Button";
-import { Markup } from "interweave";
+// import Button from "../../components/Button/Button";
+// import { Markup } from "interweave";
 import { Link } from "react-router-dom";
 
 function OpeningPage(props) {

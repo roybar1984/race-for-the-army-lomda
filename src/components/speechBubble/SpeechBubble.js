@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import "./SpeechBubble.css";
 // import { gsap } from "gsap";
 import { Markup } from "interweave";

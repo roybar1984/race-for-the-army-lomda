@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "./GamePage.css";
 import { Markup } from "interweave";
 // import InputField from "../../components/inputField/InputField";
@@ -98,7 +98,7 @@ function GamePage(props) {
       setIsInfoShowed(true);
     },
     [],
-    isInfoShowed
+    props.text
   );
 
   useEffect(() => {
@@ -106,7 +106,7 @@ function GamePage(props) {
       setCurrText(props.text);
       setIsInfoShowed(true);
     }
-  }, [isInfoShowed]);
+  }, [isInfoShowed, props.text]);
 
   const handleShowQuestion = (id) => {
     setCurrLetter({

@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import { gsap } from "gsap";
+// import { gsap } from "gsap";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import OpeningPage from "./containers/openingPage/OpeningPage";
 import IntroPage from "./containers/introPage/IntroPage";

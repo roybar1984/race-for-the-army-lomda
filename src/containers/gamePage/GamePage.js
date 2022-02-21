@@ -90,12 +90,26 @@ function GamePage(props) {
   useEffect(() => {
     setCurrText(currLetter.question);
     setIsInfoShowed(false);
+    console.log(isInfoShowed);
   }, [currLetter]);
 
+  useEffect(
+    () => {
+      setCurrText(props.text);
+      setIsInfoShowed(true);
+      console.log(isInfoShowed);
+    },
+    [],
+    isInfoShowed
+  );
+
   useEffect(() => {
-    setCurrText(props.text);
-    setIsInfoShowed(true);
-  }, []);
+    if (isInfoShowed === true) {
+      setCurrText(props.text);
+      setIsInfoShowed(true);
+      console.log(isInfoShowed);
+    }
+  }, [isInfoShowed]);
 
   const handleChange0 = (event) => {
     setAns0(event.target.value);
@@ -124,7 +138,17 @@ function GamePage(props) {
   };
 
   const handleShowInfo = (event) => {
-    console.log("show-info clicked");
+    setIsInfoShowed(true);
+    // if (isInfoShowed === true) {
+    //   setIsInfoShowed(false);
+    // } else {
+    //   setIsInfoShowed(true);
+    // }
+    // console.log(isInfoShowed);
+  };
+
+  const handleShowHint = (event) => {
+    console.log("hi");
   };
 
   return (
@@ -138,7 +162,6 @@ function GamePage(props) {
           className={`info-icon ${
             !isInfoShowed ? "display-btn" : "hint-icon-hidden "
           }`}
-          // className="info-icon"
           onClick={handleShowInfo}
         ></div>
         <p className="text-paragrapgh">
@@ -149,6 +172,7 @@ function GamePage(props) {
           className={`hint-icon ${
             !isInfoShowed ? "display-btn" : "hint-icon-hidden "
           }`}
+          onClick={handleShowHint}
         ></div>
       </div>
       {/* <div className="hint-container">
@@ -167,85 +191,105 @@ function GamePage(props) {
             maxLength={1}
             value={ans0}
             id={0}
-            onChange={handleChange0}
-            onClick={() => handleShowQuestion(0)}
-            // onChange={() => handleChange(0)}
+            onChange={(event) => {
+              setAns0(event.target.value);
+            }}
+            onClick={() => {
+              handleShowQuestion(0);
+              setIsInfoShowed(false);
+            }}
           />
           <input
             className="letter-input letter1"
             maxLength={1}
             value={ans1}
             id={1}
-            onChange={handleChange1}
-            onClick={() => handleShowQuestion(1)}
-            // onChange={() => handleChange(1)}
-            // onChange={handelChange}
+            onChange={(event) => setAns1(event.target.value)}
+            onClick={() => {
+              handleShowQuestion(1);
+              setIsInfoShowed(false);
+            }}
           />
           <input
             className="letter-input letter2"
             maxLength={1}
             value={ans2}
             id={2}
-            // onChange={() => handleChange(2)}
-            onChange={handleChange2}
-            onClick={() => handleShowQuestion(2)}
-            // onChange={handelChange}
+            onChange={(event) => setAns2(event.target.value)}
+            onClick={() => {
+              handleShowQuestion(2);
+              setIsInfoShowed(false);
+            }}
           />
         </div>
         <div className="letters-row low-row-letters">
           <input
             className="letter-input letter3"
             maxLength={1}
-            // value={ans3}
+            value={ans3}
             id={3}
-            onClick={() => handleShowQuestion(3)}
-            // onChange={() => handleChange(3)}
-            // onChange={handelChange}
+            onClick={() => {
+              handleShowQuestion(3);
+              setIsInfoShowed(false);
+            }}
+            onChange={(event) => setAns3(event.target.value)}
           />
           <input
             className="letter-input letter4"
             maxLength={1}
-            // value={ans4}
+            value={ans4}
             id={4}
-            onClick={() => handleShowQuestion(4)}
-            // onChange={() => handleChange(4)}
-            // onChange={handelChange}
+            onClick={() => {
+              handleShowQuestion(4);
+              setIsInfoShowed(false);
+            }}
+            onChange={(event) => setAns4(event.target.value)}
           />
           <input
             className="letter-input letter5"
             maxLength={1}
-            // value={ans5}
+            value={ans5}
             id={5}
-            onClick={() => handleShowQuestion(5)}
-            // onChange={() => handleChange(5)}
-            // onChange={handelChange}
+            onClick={() => {
+              handleShowQuestion(5);
+              setIsInfoShowed(false);
+            }}
+            onChange={(event) => setAns5(event.target.value)}
           />
           <input
             className="letter-input letter6"
             maxLength={1}
-            onClick={() => handleShowQuestion(6)}
-            // value={ans6}
-            // id={6}
-            // onChange={() => handleChange(6)}
-            // onChange={handelChange}
+            onClick={() => {
+              handleShowQuestion(6);
+              setIsInfoShowed(false);
+            }}
+            value={ans6}
+            id={6}
+            onChange={(event) => {
+              setAns6(event.target.value);
+            }}
           />
           <input
             className="letter-input letter7"
             maxLength={1}
-            // value={ans7}
+            value={ans7}
             id={7}
-            onClick={() => handleShowQuestion(7)}
-            // onChange={() => handleChange(7)}
-            // onChange={handelChange}
+            onChange={(event) => setAns7(event.target.value)}
+            onClick={() => {
+              handleShowQuestion(7);
+              setIsInfoShowed(false);
+            }}
           />
           <input
             className="letter-input letter8"
             maxLength={1}
-            // value={ans8}
+            value={ans8}
             id={8}
-            onClick={() => handleShowQuestion(8)}
-            // onChange={() => handleChange(8)}
-            // onChange={handelChange}
+            onChange={(event) => setAns8(event.target.value)}
+            onClick={() => {
+              handleShowQuestion(8);
+              setIsInfoShowed(false);
+            }}
           />
         </div>
       </div>

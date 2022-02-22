@@ -13,7 +13,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 25rem;
+  border-radius: 20rem;
   width: 50vw;
   /* padding: 1.125em 1.5em; */
   height: 30vh;
@@ -58,6 +58,7 @@
 
   .speech-bubble {
     position: relative;
+
     /* top: -8vh; */
     /* background: #a5eaf0b6;
     display: flex;
@@ -110,5 +111,6 @@
 
   .bottom-bubble {
     top: -16vh;
+    /* left: -6vw; */
   }
 }

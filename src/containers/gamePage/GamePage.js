@@ -82,24 +82,15 @@ function GamePage(props) {
   const [isInfoShowed, setIsInfoShowed] = useState(true);
   // const [isCorrect, setIsCorrect] = "";
 
-  // const handleChange = (id, event) => {
-  //   // setValue(event.target.value);
-  //   setAns[id](event.target.value);
-  // };
-
   useEffect(() => {
     setCurrText(currLetter.question);
     setIsInfoShowed(false);
   }, [currLetter]);
 
-  useEffect(
-    () => {
-      setCurrText(props.text);
-      setIsInfoShowed(true);
-    },
-    [props.text]
-    // props.text
-  );
+  useEffect(() => {
+    setCurrText(props.text);
+    setIsInfoShowed(true);
+  }, [props.text]);
 
   useEffect(() => {
     if (isInfoShowed === true) {

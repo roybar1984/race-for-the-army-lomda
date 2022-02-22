@@ -1,0 +1,31 @@
+.character {
+  position: absolute;
+  /* top: 70vh; */
+  bottom: 0vh;
+  right: 10vw;
+  width: 50vw;
+  height: 29vh;
+  transform: scaleX(-1);
+}
+
+.cls-1 {
+  fill: #070604;
+}
+.cls-2 {
+  fill: #6c6329;
+}
+.cls-3 {
+  fill: #8a671a;
+}
+.cls-4 {
+  fill: #4a2111;
+}
+.cls-5 {
+  fill: #e8a455;
+}
+.cls-6 {
+  fill: #fff;
+}
+.cls-7 {
+  fill: #2e5d28;
+}

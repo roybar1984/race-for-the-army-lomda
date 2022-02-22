@@ -5,7 +5,7 @@ import { Markup } from "interweave";
 
 function SpeechBubble(props) {
   return (
-    <div className="speech-bubble">
+    <div className={`speech-bubble ${props.className}`}>
       <p className="bubble-title">
         <Markup content={props.title} />
       </p>

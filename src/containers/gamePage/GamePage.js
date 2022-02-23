@@ -80,6 +80,7 @@ function GamePage(props) {
 
   const [currText, setCurrText] = useState(props.text);
   const [isInfoShowed, setIsInfoShowed] = useState(true);
+  const [isHintShowed, setIsHintShowed] = useState(false);
   // const [isCorrect, setIsCorrect] = "";
 
   useEffect(() => {
@@ -90,6 +91,7 @@ function GamePage(props) {
   useEffect(() => {
     setCurrText(props.text);
     setIsInfoShowed(true);
+    setIsHintShowed(false);
   }, [props.text]);
 
   useEffect(() => {
@@ -98,6 +100,13 @@ function GamePage(props) {
       setIsInfoShowed(true);
     }
   }, [isInfoShowed, props.text]);
+
+  // useEffect(() => {
+  //   if (isInfoShowed === true) {
+  //     setCurrText(props.text);
+  //     setIsInfoShowed(true);
+  //   }
+  // }, [isHintShowed]);
 
   const handleShowQuestion = (id) => {
     setCurrLetter({
@@ -111,7 +120,12 @@ function GamePage(props) {
   };
 
   const handleShowHint = (event) => {
-    console.log("hi");
+    if (!isHintShowed) {
+      setIsHintShowed(true);
+    } else {
+      setIsHintShowed(false);
+    }
+    console.log(isInfoShowed);
   };
 
   return (
@@ -137,11 +151,16 @@ function GamePage(props) {
           onClick={handleShowHint}
         ></div>
       </div>
-      {/* <div className="hint-container">
+      <div
+        className={`hint-container ${
+          // !isHintShowed ? "hint-container-showed" : "hint-container-hidden"
+          isHintShowed ? "display-btn" : "hint-icon-hidden "
+        }`}
+      >
         <h1 className="game-title hint-title">רמז</h1>
-        <div className="close-hint-btn"></div>
+        <div className="close-hint-btn" onClick={handleShowHint}></div>
         <p className="text-paragrapgh hint-text">{currLetter.hint}</p>
-      </div> */}
+      </div>
       <div className="letter-container">
         <div className="letters-row top-row-letters">
           {/* <InputField /> */}

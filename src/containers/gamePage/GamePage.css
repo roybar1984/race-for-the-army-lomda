@@ -92,6 +92,14 @@
   background-color: rgb(223, 83, 83);
 }
 
+.hint-container-hidden {
+  visibility: hidden;
+}
+
+.hint-container-showed {
+  visibility: visible;
+}
+
 @media only screen and (max-width: 690px) {
   .game-title {
     position: relative;
@@ -130,7 +138,7 @@
     width: 70%;
     margin: 0;
     position: relative;
-    bottom: 13vh;
+    bottom: 3.5vh;
     /* margin-top: 7vh; */
     /* margin-bottom: 10vh; */
   }
@@ -193,7 +201,7 @@
   }
 
   .hint-container {
-    width: 78%;
+    /* width: 78%;
     height: 30vh;
     background-color: rgb(228, 185, 105);
     border-radius: 3rem;
@@ -202,11 +210,25 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: -9vh;
-    position: relative;
-    bottom: 14vh;
     height: fit-content;
     min-height: 25vh;
+    position: absolute; */
+
+    width: 78%;
+    /* height: 30vh; */
+    background-color: rgb(228, 185, 105);
+    border-radius: 3rem;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 18vh;
+    height: 20vh;
+    position: absolute;
+    top: 42vh;
   }
 
   .hint-text {
@@ -225,9 +247,11 @@
   .close-hint-btn {
     width: 7vw;
     height: 4vh;
-    /* display: inline-block; */
+    margin: 0;
     background-color: rgb(140, 85, 27);
     background-size: 100% 100%;
-    margin-left: auto;
+    position: absolute;
+    top: 2vh;
+    right: 10vw;
   }
 }

@@ -197,8 +197,10 @@
     position: relative;
     width: 90%;
     font-size: 9vw;
-    margin-top: 8vh;
+    margin-top: 1vh;
     margin-bottom: 2vh;
+    /* top: 0.01vh; */
+    top: -4vh;
     /* margin-top: -15vh; */
   }
 
@@ -214,7 +216,7 @@
     justify-content: center;
     margin-top: -5vh;
     position: relative;
-    bottom: 13vh;
+    bottom: 6vh;
     height: fit-content;
     min-height: 20vh;
   }

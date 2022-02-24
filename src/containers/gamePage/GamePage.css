@@ -76,7 +76,7 @@
 
 .letter-input {
   width: 1vw;
-  height: 7vh;
+  height: 5.5vh;
   padding: 0.5em;
   margin-left: 2vw;
   font-size: 2vw;
@@ -193,7 +193,7 @@
 
   .letter-input {
     width: 4.5vw;
-    height: 7vh;
+    height: 5.5vh;
     padding: 0.3em;
     margin-left: 4vw;
     font-size: 7vw;

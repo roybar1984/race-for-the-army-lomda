@@ -65,7 +65,8 @@ function OpeningPage(props) {
           <Markup content={props.Data[2].bubbleText1} />
         </p> */}
       </div>
-      <Link to={"/intro"}>
+      {/* <Link to={"/intro"}> */}
+      <Link to={"/game"}>
         <button
           onClick={handleStartLomda}
           ref={openingBtn}

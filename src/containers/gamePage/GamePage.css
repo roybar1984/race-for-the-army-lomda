@@ -27,7 +27,7 @@
   justify-content: center;
   margin-top: -5vh;
   position: relative;
-  bottom: 8vh;
+  bottom: 5vh;
   height: fit-content;
 }
 
@@ -75,7 +75,7 @@
 
 .letter-input {
   width: 1vw;
-  height: 5vh;
+  height: 7vh;
   padding: 0.5em;
   margin-left: 2vw;
   font-size: 2vw;
@@ -143,14 +143,14 @@
     height: 30vh;
     border: solid #0000ff;
     border-radius: 3rem;
-    padding: 1em;
+    padding: 0.3em 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: -5vh;
     position: relative;
-    bottom: 8vh;
+    bottom: 5vh;
     height: fit-content;
     min-height: 20vh;
   }
@@ -191,7 +191,7 @@
 
   .letter-input {
     width: 4.5vw;
-    height: 5vh;
+    height: 7vh;
     padding: 0.3em;
     margin-left: 4vw;
     font-size: 7vw;
@@ -217,6 +217,8 @@
     background-size: 100% 100%;
     margin-right: auto;
     margin-left: 2vw;
+    position: relative;
+    top: 1vh;
     /* visibility: hidden; */
   }
 

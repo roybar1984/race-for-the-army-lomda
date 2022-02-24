@@ -100,6 +100,36 @@
   visibility: visible;
 }
 
+.hint-container {
+  width: 78%;
+  background-color: rgb(228, 185, 105);
+  border-radius: 3rem;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 18vh;
+  height: 20vh;
+  position: absolute;
+  top: 42vh;
+  right: 4.5vw;
+}
+
+.hint-container-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.504);
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 690px) {
   .game-title {
     position: relative;
@@ -229,6 +259,7 @@
     height: 20vh;
     position: absolute;
     top: 42vh;
+    right: 4.5vw;
   }
 
   .hint-text {

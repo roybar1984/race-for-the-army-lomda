@@ -152,14 +152,25 @@ function GamePage(props) {
         ></div>
       </div>
       <div
-        className={`hint-container ${
+        className={`hint-container-wrapper ${
           // !isHintShowed ? "hint-container-showed" : "hint-container-hidden"
           isHintShowed ? "display-btn" : "hint-icon-hidden "
         }`}
+        // className="hint-container-wrapper"
       >
-        <h1 className="game-title hint-title">רמז</h1>
-        <div className="close-hint-btn" onClick={handleShowHint}></div>
-        <p className="text-paragrapgh hint-text">{currLetter.hint}</p>
+        <div
+          className="hint-container"
+          //   className={`hint-container
+          //   ${
+          //     // !isHintShowed ? "hint-container-showed" : "hint-container-hidden"
+          //     // isHintShowed ? "display-btn" : "hint-icon-hidden "
+          //   }`
+          // }
+        >
+          <h1 className="game-title hint-title">רמז</h1>
+          <div className="close-hint-btn" onClick={handleShowHint}></div>
+          <p className="text-paragrapgh hint-text">{currLetter.hint}</p>
+        </div>
       </div>
       <div className="letter-container">
         <div className="letters-row top-row-letters">

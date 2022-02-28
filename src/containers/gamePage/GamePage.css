@@ -92,11 +92,11 @@
 }
 
 .correct {
-  background-color: yellowgreen;
+  background-color: #98ea9c;
 }
 
 .wrong {
-  background-color: rgb(223, 83, 83);
+  background-color: rgb(255 158 158);
 }
 
 .hint-icon-hidden {

@@ -22,7 +22,12 @@ function App() {
             exact
             path="/game"
             element={
-              <GamePage Data={Data} title={Data[5].title} text={Data[5].text} />
+              <GamePage
+                Data={Data}
+                title={Data[5].title}
+                text={Data[5].text}
+                finishText={Data[5].finishText}
+              />
             }
           >
             {/* <IntroPage Data={Data} /> */}

@@ -66,7 +66,7 @@ function OpeningPage(props) {
         </p> */}
       </div>
       {/* <Link to={"/intro"}> */}
-      <Link to={"/game"}>
+      <Link to={"/intro"}>
         <button
           onClick={handleStartLomda}
           ref={openingBtn}

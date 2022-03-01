@@ -187,6 +187,7 @@ function GamePage(props) {
             handleShowQuestion={handleShowQuestion}
             setIsInfoShowed={setIsInfoShowed}
             arrLetters={arrLetters}
+            name="ssn-0"
             // isCorrect={isCorrect}
             // setIsCorrect={setIsCorrect}
           />
@@ -199,6 +200,7 @@ function GamePage(props) {
             handleShowQuestion={handleShowQuestion}
             setIsInfoShowed={setIsInfoShowed}
             arrLetters={arrLetters}
+            name="ssn-1"
             // isCorrect={isCorrect}
             // setIsCorrect={setIsCorrect}
           />
@@ -211,6 +213,7 @@ function GamePage(props) {
             handleShowQuestion={handleShowQuestion}
             setIsInfoShowed={setIsInfoShowed}
             arrLetters={arrLetters}
+            name="ssn-2"
             // isCorrect={isCorrect}
             // setIsCorrect={setIsCorrect}
           />
@@ -225,6 +228,7 @@ function GamePage(props) {
             handleShowQuestion={handleShowQuestion}
             setIsInfoShowed={setIsInfoShowed}
             arrLetters={arrLetters}
+            name="ssn-3"
             // isCorrect={isCorrect}
             // setIsCorrect={setIsCorrect}
           />
@@ -237,6 +241,7 @@ function GamePage(props) {
             handleShowQuestion={handleShowQuestion}
             setIsInfoShowed={setIsInfoShowed}
             arrLetters={arrLetters}
+            name="ssn-4"
             // isCorrect={isCorrect}
             // setIsCorrect={setIsCorrect}
           />
@@ -249,6 +254,7 @@ function GamePage(props) {
             handleShowQuestion={handleShowQuestion}
             setIsInfoShowed={setIsInfoShowed}
             arrLetters={arrLetters}
+            name="ssn-5"
             // isCorrect={isCorrect}
             // setIsCorrect={setIsCorrect}
           />
@@ -261,6 +267,7 @@ function GamePage(props) {
             handleShowQuestion={handleShowQuestion}
             setIsInfoShowed={setIsInfoShowed}
             arrLetters={arrLetters}
+            name="ssn-6"
             // isCorrect={isCorrect}
             // setIsCorrect={setIsCorrect}
           />
@@ -273,6 +280,7 @@ function GamePage(props) {
             handleShowQuestion={handleShowQuestion}
             setIsInfoShowed={setIsInfoShowed}
             arrLetters={arrLetters}
+            name="ssn-7"
             // isCorrect={isCorrect}
             // setIsCorrect={setIsCorrect}
           />
@@ -285,6 +293,7 @@ function GamePage(props) {
             handleShowQuestion={handleShowQuestion}
             setIsInfoShowed={setIsInfoShowed}
             arrLetters={arrLetters}
+            name="ssn-8"
             // isCorrect={isCorrect}
             // setIsCorrect={setIsCorrect}
           />

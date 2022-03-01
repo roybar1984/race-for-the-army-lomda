@@ -2,11 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./InputField.css";
 
 function InputField(props) {
+  // const numOfFields = 9;
   const [isCorrect, setIsCorrect] = useState("");
 
-  useEffect(() => {
-    console.log("changed");
-  }, [isCorrect]);
   useEffect(() => {
     console.log(isCorrect);
   }, []);
@@ -14,8 +12,9 @@ function InputField(props) {
     <>
       <input
         className={
-          `letter-input letter${props.id} ${isCorrect && "correct"}  `
-          // ${!isCorrect && "wrong"}
+          `letter-input letter${props.id} ${isCorrect && "correct"} ${
+            !isCorrect && "wrong"
+          } ${isCorrect === "" && "letter-input"}`
           // `
           // ${isCorrect ? "correct" :` !isCorrect ? "wrong" : "letter-input"`}
           // `
@@ -26,13 +25,26 @@ function InputField(props) {
           props.setIsInfoShowed(false);
         }}
         onChange={(event) => {
+          // const { maxLength, value, name } = event.target;
+          // const [fieldName, fieldIndex] = name.split("-");
+
           let answer = event.target.value;
           props.setanswer(answer);
-          console.log(event.target.value);
-          console.log(props.arrLetters[props.id].answer);
           if (answer === props.arrLetters[props.id].answer) {
             setIsCorrect(true);
             console.log("correct");
+            // if (parseInt(fieldIndex, 10) < numOfFields) {
+            //   console.log(fieldIndex);
+            //   // Get the next input field
+            //   const nextSibling = document.querySelector(
+            //     `input[name=ssn-${parseInt(fieldIndex, 10) + 1}]`
+            //   );
+
+            //   // If found, focus the next field
+            //   if (nextSibling !== null) {
+            //     nextSibling.focus();
+            //   }
+            // }
           } else {
             setIsCorrect(false);
             console.log("wrong");

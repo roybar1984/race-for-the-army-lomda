@@ -80,6 +80,14 @@
   top: 1vh;
 }
 
+.correct {
+  background-color: #98ea9c;
+}
+
+.wrong {
+  background-color: rgb(255 158 158);
+}
+
 .letter-input {
   width: 1vw;
   height: 5.3vh;
@@ -91,13 +99,13 @@
   text-align: center;
 }
 
-.correct {
+/* .correct {
   background-color: #98ea9c;
 }
 
 .wrong {
   background-color: rgb(255 158 158);
-}
+} */
 
 .hint-icon-hidden {
   visibility: hidden;

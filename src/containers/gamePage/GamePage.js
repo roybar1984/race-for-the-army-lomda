@@ -100,9 +100,9 @@ function GamePage(props) {
       setCurrText(props.text);
       setIsInfoShowed(true);
     }
-    if (isFinished === true) {
-      setCurrText(props.finishText);
-    }
+    // if (isFinished === true) {
+    //   setCurrText(props.finishText);
+    // }
   }, [isInfoShowed, props.text, props.finishText]);
 
   // useEffect(() => {

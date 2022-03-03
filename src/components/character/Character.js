@@ -1,10 +1,20 @@
 import React from "react";
 import "./Character.css";
 
-function Character() {
+function Character(props) {
+  console.log(props.textIndex);
+  console.log(props.isPreMissionPages);
   return (
     <div>
-      <svg className="character" viewBox="0 0 550.01 829.56">
+      <svg
+        className={`character ${
+          ((props.isPreMissionPages && props.textIndex === 4) ||
+            props.textIndex === 2) &&
+          "character-looks-to-the-left "
+        }`}
+        // className="character"
+        viewBox="0 0 550.01 829.56"
+      >
         <g id="Layer_2" data-name="Layer 2">
           <g id="Layer_1-2" data-name="Layer 1">
             <path

@@ -105,6 +105,10 @@ function GamePage(props) {
     // }
   }, [isInfoShowed, props.text, props.finishText]);
 
+  useEffect(() => {
+    props.setIsPreMissionPages(false);
+  }, []);
+
   // useEffect(() => {
   //   if (isInfoShowed === true) {
   //     setCurrText(props.text);
@@ -133,7 +137,7 @@ function GamePage(props) {
   };
 
   return (
-    <div className="game-page-container">
+    <div className="game-page-container mission1-background">
       <h1 className="game-title">
         {" "}
         <Markup content={props.title} />

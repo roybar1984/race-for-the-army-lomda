@@ -14,6 +14,10 @@ function OpeningPage(props) {
   const openingBtn = useRef(null);
 
   useEffect(() => {
+    props.setIsPreMissionPages(false);
+  }, []);
+
+  useEffect(() => {
     const openingAnimationTl = gsap.timeline();
     openingAnimationTl
       .from(title1.current, {

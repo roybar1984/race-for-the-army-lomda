@@ -48,6 +48,10 @@
   width: 80%;
 }
 
+.pre-mission-bubbles {
+  height: 23vh;
+}
+
 @media only screen and (max-width: 690px) {
   .bubble-title {
     font-weight: 900;

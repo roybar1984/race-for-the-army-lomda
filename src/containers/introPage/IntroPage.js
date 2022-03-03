@@ -9,7 +9,7 @@ import Character from "./../../components/character/Character";
 function IntroPage(props) {
   useEffect(() => {
     props.setTextIndex(1);
-  }, [props.setTextIndex]);
+  }, []);
   // const [textIndex, setTextIndex] = useState(1);
   const navigate = useNavigate();
   // let history = useHistory();

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./IntroPage.css";
 // import { gsap } from "gsap";
@@ -9,14 +9,14 @@ import Character from "./../../components/character/Character";
 function IntroPage(props) {
   useEffect(() => {
     props.setTextIndex(1);
-  }, []);
+  }, [props.setTextIndex]);
   // const [textIndex, setTextIndex] = useState(1);
   const navigate = useNavigate();
   // let history = useHistory();
   console.log(navigate);
 
   const handleClickNext = (event) => {
-    props.setTextIndex(2);
+    props.setTextIndex(props.textIndex + 1);
   };
   return (
     // {clickNum === props.maxClicksNum && (
@@ -51,7 +51,7 @@ function IntroPage(props) {
         <div className="next-btn" onClick={handleClickNext}></div>
       ) : (
         <button
-          // onClick={handleStartLomda}
+          onClick={handleClickNext}
           // ref={openingBtn}
           className="btns start-lomda-btn"
         >

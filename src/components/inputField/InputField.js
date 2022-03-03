@@ -5,9 +5,6 @@ function InputField(props) {
   // const numOfFields = 9;
   const [isCorrect, setIsCorrect] = useState("");
 
-  useEffect(() => {
-    console.log(isCorrect);
-  }, []);
   return (
     <>
       <input

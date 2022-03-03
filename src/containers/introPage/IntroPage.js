@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./IntroPage.css";
 // import { gsap } from "gsap";
 import SpeechBubble from "../../components/speechBubble/SpeechBubble";
@@ -6,18 +7,59 @@ import Character from "./../../components/character/Character";
 // import { Markup } from "interweave";
 
 function IntroPage(props) {
+  useEffect(() => {
+    props.setTextIndex(1);
+  }, []);
+  // const [textIndex, setTextIndex] = useState(1);
+  const navigate = useNavigate();
+  // let history = useHistory();
+  console.log(navigate);
+
+  const handleClickNext = (event) => {
+    props.setTextIndex(2);
+  };
   return (
+    // {clickNum === props.maxClicksNum && (
+    //   <div className="delay-show-btn">
+    //     {props.isEventListener ? (
+    //       <NextAndBackButtons back={props.back} next={props.next} />
+    //     ) : (
+    //       <Btn
+    //         className="start-btn btns"
+    //         page={props.page}
+    //         setIsPlusBtnOver={setIsPlusBtnOver}
+    //         handleClick={handleClickNext}
+    //         buttonText="יאללה נתחיל"
+    //       />
+    //     )}
+    //   </div>
+    // )}
     <div className="bubble-container">
       <SpeechBubble
-        text={props.Data[1].bubbleText1}
-        title={props.Data[1].bubbleTitle}
+        text={props.Data[props.textIndex].bubbleText1}
+        title={props.Data[props.textIndex].bubbleTitle}
         className={"top-bubble"}
       />
-      <SpeechBubble
-        text={props.Data[1].bubbleText2}
-        className={"bottom-bubble"}
-      />
-      <div className="next-btn"></div>
+
+      {props.Data[props.textIndex].bubbleText2 && (
+        <SpeechBubble
+          text={props.Data[props.textIndex].bubbleText2}
+          className={"bottom-bubble"}
+        />
+      )}
+      {props.textIndex === 1 ? (
+        <div className="next-btn" onClick={handleClickNext}></div>
+      ) : (
+        <button
+          // onClick={handleStartLomda}
+          // ref={openingBtn}
+          className="btns start-lomda-btn"
+        >
+          לתחילת המירוץ
+        </button>
+      )}
+
+      {/* <div className="next-btn" onClick={handleClickNext}></div> */}
       {/* <Button text={props.Data[1].btnText} /> */}
       <Character />
     </div>

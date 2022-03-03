@@ -61,11 +61,7 @@ function OpeningPage(props) {
         <h3 ref={title2} className="opening-titles opening-title2">
           המירוץ לצה״ל
         </h3>
-        {/* <p>
-          <Markup content={props.Data[2].bubbleText1} />
-        </p> */}
       </div>
-      {/* <Link to={"/intro"}> */}
       <Link to={"/intro"}>
         <button
           onClick={handleStartLomda}

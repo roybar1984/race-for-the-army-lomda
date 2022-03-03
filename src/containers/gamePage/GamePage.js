@@ -81,7 +81,7 @@ function GamePage(props) {
   const [currText, setCurrText] = useState(props.text);
   const [isInfoShowed, setIsInfoShowed] = useState(true);
   const [isHintShowed, setIsHintShowed] = useState(false);
-  const [isFinished, setIsFinished] = useState(false);
+  // const [isFinished, setIsFinished] = useState(false);
   // const [isCorrect, setIsCorrect] = useState("");
 
   useEffect(() => {
@@ -103,7 +103,7 @@ function GamePage(props) {
     if (isFinished === true) {
       setCurrText(props.finishText);
     }
-  }, [isInfoShowed, props.text, isFinished, props.finishText]);
+  }, [isInfoShowed, props.text, props.finishText]);
 
   // useEffect(() => {
   //   if (isInfoShowed === true) {

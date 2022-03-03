@@ -3,9 +3,11 @@ import "./OpeningPage.css";
 import { gsap } from "gsap";
 // import Button from "../../components/Button/Button";
 // import { Markup } from "interweave";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function OpeningPage(props) {
+  const navigate = useNavigate();
+
   const titlesContainerRef = useRef(null);
   const title1 = useRef(null);
   const title2 = useRef(null);
@@ -50,7 +52,10 @@ function OpeningPage(props) {
       );
   }, []);
 
-  function handleStartLomda(event) {}
+  function handleStartLomda(event) {
+    // navigate('/home');
+    setTimeout(navigate("./intro"), 1000);
+  }
 
   return (
     <>
@@ -62,15 +67,15 @@ function OpeningPage(props) {
           המירוץ לצה״ל
         </h3>
       </div>
-      <Link to={"/intro"}>
-        <button
-          onClick={handleStartLomda}
-          ref={openingBtn}
-          className="btns start-lomda-btn"
-        >
-          בואו נתחיל
-        </button>
-      </Link>
+      {/* <Link to={"/intro"}> */}
+      <button
+        onClick={handleStartLomda}
+        ref={openingBtn}
+        className="btns start-lomda-btn"
+      >
+        בואו נתחיל
+      </button>
+      {/* </Link> */}
       {/* <Button ref={openingBtn} /> */}
     </>
   );

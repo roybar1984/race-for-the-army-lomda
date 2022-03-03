@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // import { gsap } from "gsap";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import OpeningPage from "./containers/openingPage/OpeningPage";
@@ -9,6 +9,11 @@ import Data from "./data/text.json";
 
 function App() {
   const [textIndex, setTextIndex] = useState(1);
+  const [isHidden, setIsHidden] = useState("hidden");
+
+  useEffect(() => {
+    setIsHidden("hidden");
+  }, []);
   return (
     <div className="App">
       <Router>
@@ -22,6 +27,9 @@ function App() {
                 Data={Data}
                 textIndex={textIndex}
                 setTextIndex={setTextIndex}
+                isHidden={isHidden}
+                setIsHidden={setIsHidden}
+                wait={800}
               />
             }
           ></Route>

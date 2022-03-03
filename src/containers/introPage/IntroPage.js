@@ -8,8 +8,18 @@ import Character from "./../../components/character/Character";
 
 function IntroPage(props) {
   useEffect(() => {
+    props.setIsHidden("hidden");
     props.setTextIndex(1);
   }, []);
+
+  useEffect(() => {
+    setTimeout(function () {
+      props.setIsHidden((prevState) => {
+        prevState = "";
+      });
+    }, props.wait);
+  }, []);
+
   // const [textIndex, setTextIndex] = useState(1);
   const navigate = useNavigate();
   // let history = useHistory();
@@ -35,6 +45,7 @@ function IntroPage(props) {
     //   </div>
     // )}
     <div className="bubble-container">
+      {props.isHidden && <div className="black-div"></div>}
       <SpeechBubble
         text={props.Data[props.textIndex].bubbleText1}
         title={props.Data[props.textIndex].bubbleTitle}

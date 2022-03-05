@@ -12,7 +12,6 @@ function Character(props) {
             props.textIndex === 2) &&
           "character-looks-to-the-left "
         }`}
-        // className="character"
         viewBox="0 0 550.01 829.56"
       >
         <g id="Layer_2" data-name="Layer 2">

@@ -3,19 +3,15 @@ import "./InputField.css";
 
 function InputField(props) {
   // const numOfFields = 9;
-  const [isCorrect, setIsCorrect] = useState("");
+  const [isCorrect, setIsCorrect] = useState();
+  const [isClicked, setIsClicked] = useState(false);
 
   return (
     <>
       <input
-        className={
-          `letter-input letter${props.id} ${isCorrect && "correct"} ${
-            !isCorrect && "wrong"
-          } ${isCorrect === "" && "letter-input"}`
-          // `
-          // ${isCorrect ? "correct" :` !isCorrect ? "wrong" : "letter-input"`}
-          // `
-        }
+        className={`letter-input  ${isCorrect && "correct"} ${
+          isClicked && !isCorrect && "wrong"
+        } ${!isClicked && isCorrect === "" && "letter-input"}`}
         maxLength={1}
         onClick={() => {
           props.handleShowQuestion(props.id);
@@ -26,12 +22,16 @@ function InputField(props) {
           // const [fieldName, fieldIndex] = name.split("-");
 
           let answer = event.target.value;
+          setIsClicked(true);
+          if (answer === "") {
+            setIsClicked(false);
+          }
           props.setanswer(answer);
+
           if (answer === props.arrLetters[props.id].answer) {
             setIsCorrect(true);
             console.log("correct");
             // if (parseInt(fieldIndex, 10) < numOfFields) {
-            //   console.log(fieldIndex);
             //   // Get the next input field
             //   const nextSibling = document.querySelector(
             //     `input[name=ssn-${parseInt(fieldIndex, 10) + 1}]`
@@ -44,7 +44,6 @@ function InputField(props) {
             // }
           } else {
             setIsCorrect(false);
-            console.log("wrong");
           }
         }}
         // value={ans0}

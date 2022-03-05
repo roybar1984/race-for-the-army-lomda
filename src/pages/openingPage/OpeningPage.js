@@ -3,7 +3,7 @@ import "./OpeningPage.css";
 import { gsap } from "gsap";
 // import Button from "../../components/Button/Button";
 // import { Markup } from "interweave";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function OpeningPage(props) {
   const navigate = useNavigate();

@@ -123,7 +123,6 @@ function GamePage(props) {
       hint: arrLetters[id].hint,
       answer: arrLetters[id].answer,
     });
-    console.log(currLetter);
     setCurrText(currLetter.question);
   };
 
@@ -133,7 +132,6 @@ function GamePage(props) {
     } else {
       setIsHintShowed(false);
     }
-    console.log(isInfoShowed);
   };
 
   return (

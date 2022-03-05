@@ -30,7 +30,6 @@ function InputField(props) {
 
           if (answer === props.arrLetters[props.id].answer) {
             setIsCorrect(true);
-            console.log("correct");
             // if (parseInt(fieldIndex, 10) < numOfFields) {
             //   // Get the next input field
             //   const nextSibling = document.querySelector(

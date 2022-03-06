@@ -2,8 +2,6 @@ import React from "react";
 import "./Character.css";
 
 function Character(props) {
-  console.log(props.textIndex);
-  console.log(props.isPreMissionPages);
   return (
     <div>
       <svg

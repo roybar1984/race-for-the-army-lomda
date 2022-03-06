@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 // import Button from "../../components/Button/Button";
 // import { Markup } from "interweave";
 import { useNavigate } from "react-router-dom";
+import AnimatedPage from "../../components/AnimatedPage";
 
 function OpeningPage(props) {
   const navigate = useNavigate();
@@ -62,26 +63,28 @@ function OpeningPage(props) {
   }
 
   return (
-    <>
-      <div ref={titlesContainerRef} className="titles-container">
-        <h1 ref={title1} className="opening-titles opening-title1">
-          מציון לציונות
-        </h1>
-        <h3 ref={title2} className="opening-titles opening-title2">
-          המירוץ לצה״ל
-        </h3>
-      </div>
-      {/* <Link to={"/intro"}> */}
-      <button
-        onClick={handleStartLomda}
-        ref={openingBtn}
-        className="btns start-lomda-btn"
-      >
-        בואו נתחיל
-      </button>
-      {/* </Link> */}
-      {/* <Button ref={openingBtn} /> */}
-    </>
+    <AnimatedPage>
+      <>
+        <div ref={titlesContainerRef} className="titles-container">
+          <h1 ref={title1} className="opening-titles opening-title1">
+            מציון לציונות
+          </h1>
+          <h3 ref={title2} className="opening-titles opening-title2">
+            המירוץ לצה״ל
+          </h3>
+        </div>
+        {/* <Link to={"/intro"}> */}
+        <button
+          onClick={handleStartLomda}
+          ref={openingBtn}
+          className="btns start-lomda-btn"
+        >
+          בואו נתחיל
+        </button>
+        {/* </Link> */}
+        {/* <Button ref={openingBtn} /> */}
+      </>
+    </AnimatedPage>
   );
 }
 

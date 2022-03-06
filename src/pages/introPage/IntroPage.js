@@ -5,6 +5,7 @@ import "./IntroPage.css";
 import SpeechBubble from "../../components/speechBubble/SpeechBubble";
 import Character from "../../components/character/Character";
 import { Markup } from "interweave";
+import AnimatedPage from "../../components/AnimatedPage";
 
 function IntroPage(props) {
   const navigate = useNavigate();
@@ -46,56 +47,61 @@ function IntroPage(props) {
     navigate("/intro", { replace: true });
   };
   return (
-    <div className="bubble-container">
-      {props.isHidden && <div className="black-div"></div>}
-      {props.isPreMissionPages && (
-        <h1 className="mission-title">
-          <Markup content={props.Data[props.textIndex].title} />
-        </h1>
-      )}
-      <SpeechBubble
-        text={props.Data[props.textIndex].bubbleText1}
-        title={props.Data[props.textIndex].bubbleTitle}
-        className={`top-bubble ${
-          props.isPreMissionPages && "pre-mission-bubbles "
-        }`}
-      />
-
-      {props.Data[props.textIndex].bubbleText2 && (
+    <AnimatedPage>
+      <div className="bubble-container">
+        {props.isHidden && <div className="black-div"></div>}
+        {props.isPreMissionPages && (
+          <h1 className="mission-title">
+            <Markup content={props.Data[props.textIndex].title} />
+          </h1>
+        )}
         <SpeechBubble
-          text={props.Data[props.textIndex].bubbleText2}
-          className={`bottom-bubble ${
+          text={props.Data[props.textIndex].bubbleText1}
+          title={props.Data[props.textIndex].bubbleTitle}
+          className={`top-bubble ${
             props.isPreMissionPages && "pre-mission-bubbles "
           }`}
         />
-      )}
-      {!props.Data[props.textIndex].btnText ? (
-        <div className="next-btn" onClick={handleClickNext}></div>
-      ) : (
-        props.Data[props.textIndex].btnText && (
-          <button
-            onClick={handleClickNext}
-            // ref={openingBtn}
-            className={`btns start-lomda-btn ${
-              props.isPreMissionPages && "start-mission-btn"
-            }`}
-          >
-            {props.Data[props.textIndex].btnText}
-          </button>
-        )
-      )}
-      {props.isPreMissionPages && props.Data[props.textIndex].btnText2 && (
-        <div className="back-to-explenation-btn" onClick={handleClickPrevText}>
-          {" "}
-          {props.Data[props.textIndex].btnText2}
-        </div>
-      )}
 
-      <Character
-        isPreMissionPages={props.isPreMissionPages}
-        textIndex={props.textIndex}
-      />
-    </div>
+        {props.Data[props.textIndex].bubbleText2 && (
+          <SpeechBubble
+            text={props.Data[props.textIndex].bubbleText2}
+            className={`bottom-bubble ${
+              props.isPreMissionPages && "pre-mission-bubbles "
+            }`}
+          />
+        )}
+        {!props.Data[props.textIndex].btnText ? (
+          <div className="next-btn" onClick={handleClickNext}></div>
+        ) : (
+          props.Data[props.textIndex].btnText && (
+            <button
+              onClick={handleClickNext}
+              // ref={openingBtn}
+              className={`btns start-lomda-btn ${
+                props.isPreMissionPages && "start-mission-btn"
+              }`}
+            >
+              {props.Data[props.textIndex].btnText}
+            </button>
+          )
+        )}
+        {props.isPreMissionPages && props.Data[props.textIndex].btnText2 && (
+          <div
+            className="back-to-explenation-btn"
+            onClick={handleClickPrevText}
+          >
+            {" "}
+            {props.Data[props.textIndex].btnText2}
+          </div>
+        )}
+
+        <Character
+          isPreMissionPages={props.isPreMissionPages}
+          textIndex={props.textIndex}
+        />
+      </div>
+    </AnimatedPage>
   );
 }
 

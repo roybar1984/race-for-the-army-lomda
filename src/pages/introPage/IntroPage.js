@@ -13,7 +13,6 @@ function IntroPage(props) {
   useEffect(() => {
     props.setIsHidden("hidden");
     props.setTextIndex(1);
-
     props.setIsPreMissionPages(false);
   }, []);
 
@@ -56,6 +55,9 @@ function IntroPage(props) {
           </h1>
         )}
         <SpeechBubble
+          delay={2}
+          animationY={220}
+          textIndex={props.textIndex}
           text={props.Data[props.textIndex].bubbleText1}
           title={props.Data[props.textIndex].bubbleTitle}
           className={`top-bubble ${
@@ -65,6 +67,9 @@ function IntroPage(props) {
 
         {props.Data[props.textIndex].bubbleText2 && (
           <SpeechBubble
+            delay={7}
+            animationY={100}
+            textIndex={props.textIndex}
             text={props.Data[props.textIndex].bubbleText2}
             className={`bottom-bubble ${
               props.isPreMissionPages && "pre-mission-bubbles "

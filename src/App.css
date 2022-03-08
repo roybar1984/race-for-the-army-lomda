@@ -22,6 +22,8 @@
   height: 100vh;
   overflow: hidden;
   direction: rtl;
+  /* background-image: url("./media/images-lomda/opening-background.png"); */
+  background-size: 100% 100%;
   background: #a5eaf0b6;
 }
 

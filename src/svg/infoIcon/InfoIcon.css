@@ -1,0 +1,13 @@
+.info-background {
+  fill: #1b1464;
+}
+.info-white {
+  fill: #fff;
+}
+.info-sign {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 23px;
+}

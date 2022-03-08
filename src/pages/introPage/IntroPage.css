@@ -18,11 +18,12 @@
 
 .mission-title {
   position: relative;
-  font-size: 8vw;
+  font-size: 10vw;
   width: 100%;
   top: -8vh;
   margin-bottom: 5vh;
   margin-top: 4vh;
+  font-family: title;
 }
 
 .start-mission-btn {

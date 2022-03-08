@@ -34,13 +34,16 @@
 }
 
 .bubble-text {
+  font-family: normal-text;
+  font-weight: 300;
   width: 80%;
   margin: 0;
   text-align: center;
-  font-size: 2vw;
+  font-size: 3vw;
 }
 
 .bubble-title {
+  font-family: bold-text;
   font-weight: 900;
   font-size: 2.5vw;
   color: rgb(133, 93, 5);
@@ -53,11 +56,21 @@
 }
 
 @media only screen and (max-width: 690px) {
-  .bubble-title {
+  /* .bubble-title {
     font-weight: 900;
     color: rgb(133, 93, 5);
     margin-top: -0.2vh;
     width: 80%;
+  } */
+
+  .bubble-title {
+    font-weight: 900;
+    font-size: 7vw;
+    color: rgb(133, 93, 5);
+    margin-top: 0.2vh;
+    width: 90%;
+    position: relative;
+    top: -2.5vh;
   }
 
   .speech-bubble {
@@ -80,19 +93,10 @@
     width: 93%;
     margin: 0;
     margin-top: -1vh;
-    font-size: 4.5vw;
+    font-size: 5vw;
     position: relative;
     top: -2.3vh;
-  }
-
-  .bubble-title {
-    font-weight: 900;
-    font-size: 5vw;
-    color: rgb(133, 93, 5);
-    margin-top: 0.2vh;
-    width: 90%;
-    position: relative;
-    top: -2.5vh;
+    font-weight: 300;
   }
 
   .speech-bubble:after {

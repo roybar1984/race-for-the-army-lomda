@@ -68,7 +68,7 @@ function IntroPage(props) {
         {props.Data[props.textIndex].bubbleText2 && (
           <SpeechBubble
             delay={7}
-            animationY={100}
+            animationY={80}
             textIndex={props.textIndex}
             text={props.Data[props.textIndex].bubbleText2}
             className={`bottom-bubble ${

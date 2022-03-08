@@ -10,9 +10,13 @@
 
 .game-title {
   position: relative;
-  font-size: 4vw;
+  font-size: 10vw;
   width: 90%;
   top: -9vh;
+  font-family: title;
+  position: absolute;
+  top: 5vh;
+  /* color: rgba(247, 242, 242, 0.94); */
   /* top: -7vh; */
   /* top: 0vh; */
   /* margin-bottom: 9vh; */
@@ -41,13 +45,14 @@
   font-size: 1.5vw;
   position: relative;
   top: -1vh;
+  font-family: normal-text;
 }
 
 .hint-icon {
   width: 2vw;
   height: 2vh;
   display: inline-block;
-  background-color: yellow;
+  /* background-color: yellow; */
   background-size: 100% 100%;
 }
 
@@ -80,14 +85,6 @@
   top: 1vh;
 }
 
-.correct {
-  background-color: #98ea9c;
-}
-
-.wrong {
-  background-color: rgb(255 158 158);
-}
-
 .letter-input {
   width: 1vw;
   height: 5.3vh;
@@ -97,15 +94,17 @@
   border-radius: 1.5rem;
   display: flex;
   text-align: center;
+  border: none;
+  background-color: lightblue;
 }
 
-/* .correct {
-  background-color: #98ea9c;
+.correct {
+  background-color: #8cc63f;
 }
 
 .wrong {
-  background-color: rgb(255 158 158);
-} */
+  background-color: rgb(232, 87, 87);
+}
 
 .hint-icon-hidden {
   visibility: hidden;
@@ -142,8 +141,8 @@
   min-height: 18vh;
   position: absolute;
   /* position: absolute;
-  top: 42vh;
-  right: 27.5vw; */
+    top: 42vh;
+    right: 27.5vw; */
 }
 
 .hint-container-wrapper {
@@ -183,7 +182,8 @@
   width: 2vw;
   height: 3vh;
   display: inline-block;
-  background-color: rgb(66, 119, 135);
+  /* background-color: rgb(66, 119, 135); */
+  /* background-image: url("./../../media/images-lomda/svg/"); */
   background-size: 100% 100%;
   margin-right: auto;
   margin-left: 2vw;
@@ -198,6 +198,22 @@
   position: relative;
   position: relative;
   bottom: 5vh;
+  font-family: normal-text;
+}
+
+.white-answers-wrapper {
+  width: 100vw;
+  height: 30vh;
+  background-color: #0000ff;
+  background-color: white;
+  position: absolute;
+  bottom: -5vh;
+  height: 37vh;
+  border-radius: 2em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 690px) {
@@ -209,17 +225,19 @@
     margin-bottom: 2vh;
     /* top: 0.01vh; */
     top: -4vh;
+    position: absolute;
+    top: 5vh;
     /* margin-top: -15vh; */
   }
 
   .text-container {
-    width: 78%;
+    width: 90%;
     height: 30vh;
     border: solid #0000ff;
     border-radius: 2rem;
     padding: 0.3em 1em;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
     margin-top: -5vh;
@@ -227,11 +245,13 @@
     bottom: 6vh;
     height: fit-content;
     min-height: 20vh;
+    position: absolute;
+    top: 30vh;
   }
 
   .text-paragrapgh {
     width: 95%;
-    font-size: 5vw;
+    font-size: 6.5vw;
   }
 
   .letter-container {
@@ -242,7 +262,31 @@
     width: 70%;
     margin: 0;
     position: relative;
-    bottom: 8.5vh;
+    bottom: 3.2vh;
+    /* margin-top: 7vh; */
+    /* margin-bottom: 10vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    /* height: 30vh; */
+    margin: 0;
+    /* background-color: white;
+    position: absolute;
+    bottom: -5vh;
+    height: 37vh;
+    border-radius: 2em; */
+
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin: 0;
+    position: relative;
+    bottom: 8.5vh; */
     /* margin-top: 7vh; */
     /* margin-bottom: 10vh; */
   }
@@ -264,18 +308,30 @@
   }
 
   .letter-input {
-    width: 4.5vw;
-    height: 5.3vh;
+    width: 5vw;
+    height: 4vh;
     padding: 0.3em;
     margin-left: 4vw;
-    font-size: 7vw;
-    border-radius: 0.3rem;
+    font-size: 10vw;
+    color: white;
+    font-family: bold-text;
+    border-radius: 0.6rem;
     display: flex;
     text-align: center;
+    /* background-color: lightblue; */
   }
 
   .hint-icon {
-    width: 3vw;
+    width: 14vw;
+    height: 10vh;
+    display: inline-block;
+    /* background-color: yellow; */
+    background-size: 100% 100%;
+    margin-top: auto;
+  }
+
+  .hint-icon-rules {
+    width: 5vw;
     height: 3vh;
     display: inline-block;
     background-color: yellow;
@@ -284,15 +340,17 @@
   }
 
   .info-icon {
-    width: 7vw;
-    height: 4vh;
+    width: 10vw;
+    height: 6vh;
     display: inline-block;
-    background-color: rgb(66, 119, 135);
     background-size: 100% 100%;
-    margin-right: auto;
+    position: absolute;
+    top: -3vh;
+    right: 2vw;
+    /* margin-right: auto;
     margin-left: 2vw;
     position: relative;
-    top: 1vh;
+    top: 1vh; */
     /* visibility: hidden; */
   }
 
@@ -343,13 +401,13 @@
     position: relative;
     bottom: 5vh;
     width: 95%;
-    font-size: 5vw;
+    font-size: 5.8vw;
   }
 
   .hint-title {
     position: relative;
-    top: 0.1vh;
-    margin-bottom: 5vh;
+    top: 1.1vh;
+    margin-bottom: 4vh;
   }
 
   .close-hint-btn {

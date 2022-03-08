@@ -5,6 +5,7 @@
   justify-content: space-around;
   height: 100vh;
   width: 100vw;
+  /* overflow: hidden; */
   /* background-color: #a5eaf0b6; */
 }
 
@@ -25,7 +26,9 @@
 .text-container {
   width: 43%;
   height: 30vh;
-  border: solid #0000ff;
+  background-color: #0695ed;
+  color: rgb(228, 228, 228);
+  /* border: solid #0000ff; */
   border-radius: 5rem;
   padding: 1em;
   display: flex;
@@ -95,7 +98,7 @@
   display: flex;
   text-align: center;
   border: none;
-  background-color: lightblue;
+  background-color: #bce5fd;
 }
 
 .correct {
@@ -204,10 +207,9 @@
 .white-answers-wrapper {
   width: 100vw;
   height: 30vh;
-  background-color: #0000ff;
   background-color: white;
   position: absolute;
-  bottom: -5vh;
+  bottom: -3vh;
   height: 37vh;
   border-radius: 2em;
   display: flex;
@@ -231,9 +233,9 @@
   }
 
   .text-container {
-    width: 90%;
+    width: 91vw;
     height: 30vh;
-    border: solid #0000ff;
+    /* border: solid #0000ff; */
     border-radius: 2rem;
     padding: 0.3em 1em;
     display: flex;
@@ -244,9 +246,10 @@
     position: relative;
     bottom: 6vh;
     height: fit-content;
+    padding-bottom: 2em;
     min-height: 20vh;
     position: absolute;
-    top: 30vh;
+    top: 31vh;
   }
 
   .text-paragrapgh {
@@ -331,12 +334,12 @@
   }
 
   .hint-icon-rules {
-    width: 5vw;
+    width: 6vw;
     height: 3vh;
     display: inline-block;
-    background-color: yellow;
+    background-image: url("./../../media/images-lomda/hint-icon.png");
     background-size: 100% 100%;
-    margin-top: auto;
+    /* margin-top: auto; */
   }
 
   .info-icon {

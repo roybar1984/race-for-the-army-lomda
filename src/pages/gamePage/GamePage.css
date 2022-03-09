@@ -236,6 +236,32 @@
   font-weight: 700;
 }
 
+.hint-icon-rules {
+  width: 6vw;
+  height: 3vh;
+  display: inline-block;
+  background-image: url("./../../media/images-lomda/hint-icon.png");
+  background-size: 100% 100%;
+  transition: ease 2s;
+  animation: scale-info infinite 3s;
+  animation-delay: 4s;
+  /* transform: scale(1.2);
+    /* margin-top: auto; */
+}
+
+@keyframes scale-info {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 @media only screen and (max-width: 690px) {
   .game-title {
     /* position: relative; */
@@ -363,19 +389,6 @@
     animation-delay: 4s;
     /* transform: scale(1.2);
     /* margin-top: auto; */
-  }
-
-  @keyframes scale-info {
-    0% {
-      transform: scale(1);
-    }
-
-    50% {
-      transform: scale(1.4);
-    }
-    100% {
-      transform: scale(1);
-    }
   }
 
   .info-icon {

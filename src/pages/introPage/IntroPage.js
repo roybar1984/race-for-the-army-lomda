@@ -6,8 +6,15 @@ import SpeechBubble from "../../components/speechBubble/SpeechBubble";
 import Character from "../../components/character/Character";
 import { Markup } from "interweave";
 import AnimatedPage from "../../components/AnimatedPage";
+import { motion } from "framer-motion";
 
 function IntroPage(props) {
+  const btnAnimations = {
+    initial: { opacity: 0, display: "none" },
+    animate: { opacity: 1, display: "block" },
+    exit: { opacity: 0 },
+  };
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -59,18 +66,20 @@ function IntroPage(props) {
           )} */}
         <SpeechBubble
           delay={2}
+          duration={3}
           animationY={220}
           textIndex={props.textIndex}
           text={props.Data[props.textIndex].bubbleText1}
           title={props.Data[props.textIndex].bubbleTitle}
-          className={`top-bubble ${
+          className={`top-bubble top-speech-bubble ${
             props.isPreMissionPages && "pre-mission-bubbles "
           }`}
         />
 
         {props.Data[props.textIndex].bubbleText2 && (
           <SpeechBubble
-            delay={7}
+            delay={5}
+            duration={2}
             animationY={80}
             textIndex={props.textIndex}
             text={props.Data[props.textIndex].bubbleText2}
@@ -80,30 +89,49 @@ function IntroPage(props) {
           />
         )}
         {!props.Data[props.textIndex].btnText ? (
-          <div className="next-btn" onClick={handleClickNext}></div>
+          <motion.div
+            variants={btnAnimations}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{ duration: 2, delay: 8 }}
+            className="next-btn"
+            onClick={handleClickNext}
+          >
+            {" "}
+          </motion.div>
         ) : (
           props.Data[props.textIndex].btnText && (
-            <button
+            <motion.button
               onClick={handleClickNext}
               // ref={openingBtn}
               className={`btns start-lomda-btn 
-          
               ${props.isPreMissionPages && "start-mission-btn"} ${
                 props.textIndex === 2 && "start-first-point-btn"
               }`}
+              variants={btnAnimations}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 2, delay: 4 }}
             >
               {props.Data[props.textIndex].btnText}
-            </button>
+            </motion.button>
           )
         )}
         {props.isPreMissionPages && props.Data[props.textIndex].btnText2 && (
-          <div
+          <motion.div
+            variants={btnAnimations}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{ duration: 2, delay: 4 }}
             className="back-to-explenation-btn"
             onClick={handleClickPrevText}
           >
             {" "}
             {props.Data[props.textIndex].btnText2}
-          </div>
+          </motion.div>
         )}
 
         <Character

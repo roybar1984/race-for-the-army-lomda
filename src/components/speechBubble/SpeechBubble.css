@@ -8,7 +8,7 @@
 
 .speech-bubble {
   position: relative;
-  background: #f4feff;
+  background: #d3e6f7;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,10 +27,25 @@
   width: 0;
   height: 8px;
   border: 105px solid transparent;
-  border-top-color: #f4feffed;
+  border-top-color: #d3e6f7;
   border-bottom: 0;
   margin-left: -39px;
   margin-bottom: -38px;
+}
+
+.top-speech-bubble:after {
+  content: "";
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  width: 0;
+  height: 8px;
+  border: 105px solid transparent;
+  border-top-color: #d3e6f7;
+  border-bottom: 0;
+  margin-left: -39px;
+  margin-bottom: -38px;
+  display: none;
 }
 
 .bubble-text {
@@ -53,6 +68,7 @@
 
 .pre-mission-bubbles {
   height: 23vh;
+  margin-top: 0vh;
 }
 
 @media only screen and (max-width: 690px) {
@@ -107,7 +123,7 @@
     width: 0;
     height: 0;
     border: 39px solid transparent;
-    border-top-color: #f4fefff7;
+    border-top-color: #d3e6f7;
     border-bottom: 0;
     margin-left: -39px;
     margin-bottom: -39px;
@@ -115,10 +131,16 @@
 
   .top-bubble {
     top: -10vh;
+    margin-top: 5vh;
   }
 
   .bottom-bubble {
     top: -16vh;
     /* left: -6vw; */
+  }
+
+  .pre-mission-bubbles {
+    height: 23vh;
+    margin-top: 0vh;
   }
 }

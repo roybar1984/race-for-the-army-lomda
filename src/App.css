@@ -27,29 +27,27 @@
   /* background: #a5eaf0b6; */
 }
 
-.mission1-background {
-  /* background: #55b6e094; */
-  /* background-image: linear-gradient(to right bottom, #74ebd5, #acb6e5); */
-  background-color: #0093e9;
-  /* background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%); */
-
-  /* light blue and purple*/
-  /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
-
-  /* background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%); */
-
-  /* background-image: linear-gradient(-225deg, #89f7fe 0%, #66a6ff 100%); */
-
-  background: rgb(37, 161, 101);
+.before-mission-background {
   background: linear-gradient(
     134deg,
     rgb(125, 205, 166) 0%,
     rgb(110, 210, 208) 35%,
     rgb(99, 202, 210) 100%
   );
+  /* background-image: url("./media/images-lomda/background.png"); */
+}
 
-  /* background-image: linear-gradient(180deg, #89f7fe 0%, #66a6ff 100%); */
-  /* background-image: linear-gradient(120deg, #4facfe 0%, #00f2fe 100%); */
+.mission1-background {
+  /* background: #55b6e094; */
+  /* background-image: linear-gradient(to right bottom, #74ebd5, #acb6e5); */
+  /* background-color: #0093e9; */
+  /* background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%); */
+
+  /* light blue and purple*/
+  /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
+
+  background-image: url("./media/images-lomda/background.png");
+  background-size: 100% 100%;
 }
 
 .bold-text {
@@ -85,6 +83,7 @@
     border-radius: 3em;
     font-size: 8vw;
     border: none;
+    user-select: none;
   }
 
   .start-lomda-btn {
@@ -92,5 +91,14 @@
     font-family: bold-text;
     color: #0093e9;
     font-size: 8vw;
+    border: 1px solid #084365;
+    /* padding: 10px; */
+    box-shadow: 5px 10px #084365;
+  }
+
+  .start-lomda-btn:active {
+    background-color: #dde7edbb;
+    box-shadow: 0 5px #084365;
+    transform: translateY(4px);
   }
 }

@@ -3,7 +3,7 @@ import "./SpeechBubble.css";
 // import { gsap } from "gsap";
 import { Markup } from "interweave";
 import Typewriter from "typewriter-effect";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 // import TypeWriterEffect from "react-typewriter-effect";
 
 function SpeechBubble(props) {
@@ -29,20 +29,22 @@ function SpeechBubble(props) {
     // >
     //   {children}
     // </motion.div>
-    <motion.div
-      variants={animations}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      transition={{ duration: 5, delay: props.delay }}
-      className={`speech-bubble ${props.className}`}
-    >
-      <p className="bubble-title">
-        <Markup content={props.title} />
-      </p>
+    <AnimatePresence>
+      <motion.div
+        key="bubble"
+        variants={animations}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{ duration: props.duration, delay: props.delay }}
+        className={`speech-bubble ${props.className}`}
+      >
+        <p className="bubble-title">
+          <Markup content={props.title} />
+        </p>
 
-      <div className="bubble-text">
-        {/* <Typewriter
+        <div className="bubble-text">
+          {/* <Typewriter
           options={{
             autoStart: true,
             delay: 75,
@@ -52,7 +54,7 @@ function SpeechBubble(props) {
             typewriter.typeString(currText).start();
           }}
         /> */}
-        {/* {props.textIndex === 2 ? (
+          {/* {props.textIndex === 2 ? (
           <Typewriter
             options={{
               autoStart: true,
@@ -76,9 +78,10 @@ function SpeechBubble(props) {
           />
         )} */}
 
-        <Markup content={props.text} />
-      </div>
-    </motion.div>
+          <Markup content={props.text} />
+        </div>
+      </motion.div>
+    </AnimatePresence>
   );
 }
 

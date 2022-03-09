@@ -54,9 +54,9 @@
 }
 
 .start-first-point-btn:active {
-  background-color: #1c70a0;
-  color: white;
-  box-shadow: 0 5px rgb(196, 239, 255);
+  background-color: #dde7edbb;
+  /* color: white; */
+  box-shadow: 0 5px #084365;
   transform: translateY(4px);
 }
 

@@ -16,6 +16,7 @@ function OpeningPage(props) {
 
   useEffect(() => {
     props.setIsPreMissionPages(false);
+    props.setIsStarted(false);
   }, []);
 
   useEffect(() => {
@@ -59,6 +60,7 @@ function OpeningPage(props) {
 
   function handleStartLomda(event) {
     // navigate('/home');
+    props.setIsStarted(true);
     setTimeout(navigate("./intro"), 1000);
   }
 

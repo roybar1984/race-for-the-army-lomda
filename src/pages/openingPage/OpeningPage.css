@@ -7,7 +7,7 @@
 
 .opening-titles {
   font-family: title;
-  color: aliceblue;
+  color: #d3e6f7;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   /* border: solid #0695ed; */

@@ -16,17 +16,21 @@ function App({}) {
   const [textIndex, setTextIndex] = useState(1);
   const [isHidden, setIsHidden] = useState("hidden");
   const [isPreMissionPages, setIsPreMissionPages] = useState(false);
+  const [isStarted, setIsStarted] = useState(false);
 
   useEffect(() => {
     setIsHidden("hidden");
     setTextIndex(1);
     setIsPreMissionPages(false);
+    setIsStarted(false);
   }, []);
 
   // const location = useLocation();
   return (
     <div
-      className={`App ${isPreMissionPages && "mission1-background"}`}
+      className={`App ${isStarted && "before-mission-background"} ${
+        isPreMissionPages && "mission1-background"
+      }`}
       // className="App"
     >
       <AnimatePresence exitBeforeEnter>
@@ -40,6 +44,8 @@ function App({}) {
                   Data={Data}
                   isPreMissionPages={isPreMissionPages}
                   setIsPreMissionPages={setIsPreMissionPages}
+                  isStarted={setIsStarted}
+                  setIsStarted={setIsStarted}
                 />
               }
             ></Route>

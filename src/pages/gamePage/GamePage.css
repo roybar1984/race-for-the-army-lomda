@@ -7,6 +7,7 @@
   width: 100vw;
   /* overflow: hidden; */
   background-color: #72c9f3;
+  overflow: hidden;
 }
 
 .game-title {
@@ -17,7 +18,7 @@
   font-family: title;
   position: absolute;
   top: 5vh;
-  color: aliceblue;
+  color: #d3e6f7;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   /* color: rgba(247, 242, 242, 0.94); */
@@ -41,9 +42,9 @@
   margin-top: -5vh;
   position: relative;
   bottom: 16vh;
-  height: -moz-fit-content;
+  /* height: -moz-fit-content; */
   min-height: 17vh;
-  height: fit-content;
+  /* height: fit-content; */
 }
 
 .text-paragrapgh {
@@ -240,12 +241,12 @@
     /* position: relative; */
     width: 90%;
     font-size: 13vw;
-    margin-top: 8vh;
+    margin-top: 5vh;
     margin-bottom: 2vh;
     /* top: 0.01vh; */
     /* top: -4vh; */
     position: absolute;
-    top: 5vh;
+    top: 3vh;
     /* margin-top: -15vh; */
   }
 
@@ -260,7 +261,7 @@
     align-items: center;
     justify-content: center;
     margin-top: -5vh;
-    height: fit-content;
+    /* height: fit-content; */
     padding-bottom: 4em;
     min-height: 30vh;
     position: absolute;
@@ -348,7 +349,7 @@
     background-size: 100% 100%;
     margin-top: auto;
     position: relative;
-    top: -4vh;
+    top: -10vh;
   }
 
   .hint-icon-rules {

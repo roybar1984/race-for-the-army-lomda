@@ -54,6 +54,9 @@ function IntroPage(props) {
             <Markup content={props.Data[props.textIndex].title} />
           </h1>
         )}
+        {/* {!props.isPreMissionPages && (
+            <h1 className="mission-title">ברוכים הבאים למירוץ לצה״לֹ</h1>
+          )} */}
         <SpeechBubble
           delay={2}
           animationY={220}
@@ -83,8 +86,10 @@ function IntroPage(props) {
             <button
               onClick={handleClickNext}
               // ref={openingBtn}
-              className={`btns start-lomda-btn ${
-                props.isPreMissionPages && "start-mission-btn"
+              className={`btns start-lomda-btn 
+          
+              ${props.isPreMissionPages && "start-mission-btn"} ${
+                props.textIndex === 2 && "start-first-point-btn"
               }`}
             >
               {props.Data[props.textIndex].btnText}

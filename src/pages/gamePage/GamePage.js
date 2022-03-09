@@ -139,7 +139,10 @@ function GamePage(props) {
 
   return (
     <AnimatedPage>
-      <div className="game-page-container mission1-background">
+      <div
+        className="game-page-container"
+        // mission1-background"
+      >
         <h1 className="game-title">
           {" "}
           <Markup content={props.title} />
@@ -158,7 +161,12 @@ function GamePage(props) {
             }`}
             onClick={() => setIsInfoShowed(true)}
           ></div> */}
-          <p className="text-paragrapgh">
+          <p
+            className={`text-paragrapgh ${
+              currText !== props.text && "question-text"
+            }`}
+            //  className="text-paragrapgh"
+          >
             <Markup content={currText} />
           </p>
           {!isInfoShowed && <HintIcon handleShowHint={handleShowHint} />}

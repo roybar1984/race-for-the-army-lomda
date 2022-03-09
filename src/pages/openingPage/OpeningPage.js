@@ -40,7 +40,7 @@ function OpeningPage(props) {
       .from(
         titlesContainerRef.current,
         {
-          y: 100,
+          y: 70,
           ease: "sine",
           duration: 1.5,
         },

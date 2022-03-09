@@ -22,9 +22,9 @@
   height: 100vh;
   overflow: hidden;
   direction: rtl;
-  /* background-image: url("./media/images-lomda/opening-background.png"); */
+  background-image: url("./media/images-lomda/opening-background.png");
   background-size: 100% 100%;
-  background: #a5eaf0b6;
+  /* background: #a5eaf0b6; */
 }
 
 .mission1-background {
@@ -83,10 +83,14 @@
     width: 40vw;
     height: 6vh;
     border-radius: 3em;
-    font-size: 5vw;
+    font-size: 8vw;
+    border: none;
   }
 
   .start-lomda-btn {
     margin-bottom: 25vh;
+    font-family: bold-text;
+    color: #0093e9;
+    font-size: 8vw;
   }
 }

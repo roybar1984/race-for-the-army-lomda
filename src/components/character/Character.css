@@ -2,7 +2,7 @@
   position: absolute;
   /* top: 70vh; */
   bottom: 0vh;
-  right: 10vw;
+  right: 0vw;
   width: 50vw;
   height: 29vh;
   transform: scaleX(-1);
@@ -10,7 +10,7 @@
 }
 
 .character-looks-to-the-right {
-  right: 1vw;
+  right: 0vw;
 }
 
 .character-looks-to-the-left {

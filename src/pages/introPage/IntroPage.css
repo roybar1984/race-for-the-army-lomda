@@ -18,12 +18,15 @@
 
 .mission-title {
   position: relative;
-  font-size: 10vw;
+  font-size: 13vw;
   width: 100%;
   top: -8vh;
   margin-bottom: 5vh;
   margin-top: 4vh;
   font-family: title;
+  color: aliceblue;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .start-mission-btn {
@@ -31,13 +34,37 @@
   position: relative;
   top: -5vh;
   right: -16vw;
+  /* font-size: 4vw; */
   /* right: 30vw; */
+}
+
+.start-first-point-btn {
+  margin-bottom: 25vh;
+  font-family: bold-text;
+  color: #0093e9;
+  font-size: 7.3vw;
+  min-height: 6vh;
+  height: fit-content;
+  position: relative;
+  top: 3vh;
+  width: 44vw;
+  border: 1px solid #084365;
+  /* padding: 10px; */
+  box-shadow: 5px 10px #084365;
+}
+
+.start-first-point-btn:active {
+  background-color: #1c70a0;
+  color: white;
+  box-shadow: 0 5px rgb(196, 239, 255);
+  transform: translateY(4px);
 }
 
 .back-to-explenation-btn {
   position: relative;
   right: -16vw;
   top: -3vh;
+  font-size: 5vw;
 }
 
 /*

@@ -1,0 +1,10 @@
+.close-btn-fill {
+  fill: #fff;
+}
+.close-btn-stroke {
+  fill: none;
+  stroke: #0695ed;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 22px;
+}

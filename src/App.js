@@ -13,6 +13,7 @@ import Data from "./data/text.json";
 import { AnimatePresence, motion } from "framer-motion";
 
 function App({}) {
+  // const location = useLocation();
   const [textIndex, setTextIndex] = useState(1);
   const [isHidden, setIsHidden] = useState("hidden");
   const [isPreMissionPages, setIsPreMissionPages] = useState(false);
@@ -33,8 +34,8 @@ function App({}) {
       }`}
       // className="App"
     >
-      <AnimatePresence exitBeforeEnter>
-        <Router>
+      <Router>
+        <AnimatePresence exitBeforeEnter initial={false}>
           <Routes>
             <Route
               exact
@@ -83,8 +84,8 @@ function App({}) {
               {/* <IntroPage Data={Data} /> */}
             </Route>
           </Routes>
-        </Router>
-      </AnimatePresence>
+        </AnimatePresence>
+      </Router>
     </div>
   );
 }

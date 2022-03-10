@@ -186,10 +186,10 @@
   width: 2vw;
   height: 3vh;
   margin: 0;
-  background-image: url("./../../media/images-lomda/close-btn.png");
+  /* background-image: url("./../../media/images-lomda/close-btn.png"); */
   background-size: 100% 100%;
   position: absolute;
-  top: -2vh;
+  top: -2.5vh;
   right: 2vw;
 }
 
@@ -452,12 +452,12 @@
   }
 
   .close-hint-btn {
-    width: 10vw;
+    width: 11vw;
     height: 5.5vh;
     margin: 0;
     background-size: 100% 100%;
     position: absolute;
-    top: -2vh;
+    top: -2.5vh;
     right: 4vw;
   }
 }

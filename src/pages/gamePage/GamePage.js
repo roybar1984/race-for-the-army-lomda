@@ -5,6 +5,7 @@ import InputField from "../../components/inputField/InputField";
 import AnimatedPage from "../../components/AnimatedPage";
 import InfoIcon from "../../svg/infoIcon/InfoIcon";
 import HintIcon from "../../svg/hintIcon/HintIcon";
+import CloseBtn from "../../svg/closeBtn/CloseBtn";
 
 function GamePage(props) {
   const arrLetters = [
@@ -178,7 +179,11 @@ function GamePage(props) {
         >
           <div className="hint-container">
             <h1 className="game-title hint-title">רמז</h1>
-            <div className="close-hint-btn" onClick={handleShowHint}></div>
+            <CloseBtn
+              className="close-hint-btn"
+              handleShowHint={handleShowHint}
+            />
+            {/* <div className="close-hint-btn" onClick={handleShowHint}></div> */}
             <p className="hint-text">{currLetter.hint}</p>
           </div>
         </div>

@@ -71,9 +71,9 @@ function IntroPage(props) {
           textIndex={props.textIndex}
           text={props.Data[props.textIndex].bubbleText1}
           title={props.Data[props.textIndex].bubbleTitle}
-          className={`top-bubble top-speech-bubble ${
-            props.isPreMissionPages && "pre-mission-bubbles "
-          }`}
+          className={`top-bubble 
+          ${props.textIndex !== 2 && "top-speech-bubble "}
+          ${props.isPreMissionPages && "pre-mission-bubbles "}`}
         />
 
         {props.Data[props.textIndex].bubbleText2 && (

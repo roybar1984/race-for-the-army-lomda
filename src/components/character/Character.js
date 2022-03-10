@@ -1,9 +1,22 @@
 import React from "react";
 import "./Character.css";
+import { AnimatePresence, motion } from "framer-motion";
 
 function Character(props) {
+  const characterAnimation = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
+  };
   return (
-    <div>
+    <motion.div
+      key="bubble"
+      variants={characterAnimation}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition={{ duration: 3 }}
+    >
       <svg
         className={`character ${
           ((props.isPreMissionPages && props.textIndex === 4) ||
@@ -277,7 +290,7 @@ function Character(props) {
           </g>
         </g>
       </svg>
-    </div>
+    </motion.div>
   );
 }
 

@@ -21,15 +21,27 @@ function InputField(props) {
           // const { maxLength, value, name } = event.target;
           // const [fieldName, fieldIndex] = name.split("-");
 
+          //current answer for the current field
           let answer = event.target.value;
           setIsClicked(true);
           if (answer === "") {
             setIsClicked(false);
           }
-          props.setanswer(answer);
+          // props.setanswer(answer);
+
+          //a copy of the users answers
+          let newArrAnswers = [...props.answers];
+
+          //changing the specific inputField answer
+          newArrAnswers[props.id].inputText = answer;
+          // props.setanswer(newArrAnswers);
 
           if (answer === props.arrLetters[props.id].answer) {
+            //changing color of the input box
             setIsCorrect(true);
+
+            //updating the users answer array
+            newArrAnswers[props.id].correct = true;
             // if (parseInt(fieldIndex, 10) < numOfFields) {
             //   // Get the next input field
             //   const nextSibling = document.querySelector(
@@ -42,8 +54,16 @@ function InputField(props) {
             //   }
             // }
           } else {
+            //changing color of the input box
             setIsCorrect(false);
+
+            //updating the users answer array
+            newArrAnswers[props.id].correct = false;
           }
+
+          //update the external original state
+          props.setanswer(newArrAnswers);
+          console.log(newArrAnswers);
         }}
         // value={ans0}
         // onChange={handleChange0}

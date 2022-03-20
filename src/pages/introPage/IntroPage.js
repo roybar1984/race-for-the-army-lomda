@@ -12,7 +12,7 @@ function IntroPage(props) {
   const btnAnimations = {
     initial: { opacity: 0, display: "none" },
     animate: { opacity: 1, display: "block" },
-    exit: { opacity: 0 },
+    exit: { opacity: 0, display: "none" },
   };
 
   const navigate = useNavigate();
@@ -21,6 +21,7 @@ function IntroPage(props) {
     props.setIsHidden("hidden");
     props.setTextIndex(1);
     props.setIsPreMissionPages(false);
+    props.setIsStarted(true);
     return () => {
       props.setIsPreMissionPages(false);
       props.setIsStarted(true);

@@ -66,15 +66,44 @@ function GamePage(props) {
   ];
   // const arrAnswers = ["ב", "י", "ת", "ג", "ו", "ל", "ו", "מ", "ב"];
 
-  const [ans0, setAns0] = useState("");
-  const [ans1, setAns1] = useState("");
-  const [ans2, setAns2] = useState("");
-  const [ans3, setAns3] = useState("");
-  const [ans4, setAns4] = useState("");
-  const [ans5, setAns5] = useState("");
-  const [ans6, setAns6] = useState("");
-  const [ans7, setAns7] = useState("");
-  const [ans8, setAns8] = useState("");
+  const [answers, setAnswers] = useState([
+    {
+      inputText: "",
+      correct: false,
+    },
+    {
+      inputText: "",
+      correct: false,
+    },
+    {
+      inputText: "",
+      correct: false,
+    },
+    {
+      inputText: "",
+      correct: false,
+    },
+    {
+      inputText: "",
+      correct: false,
+    },
+    {
+      inputText: "",
+      correct: false,
+    },
+    {
+      inputText: "",
+      correct: false,
+    },
+    {
+      inputText: "",
+      correct: false,
+    },
+    {
+      inputText: "",
+      correct: false,
+    },
+  ]);
 
   const [currLetter, setCurrLetter] = useState({
     question: "",
@@ -85,8 +114,15 @@ function GamePage(props) {
   const [currText, setCurrText] = useState(props.text);
   const [isInfoShowed, setIsInfoShowed] = useState(true);
   const [isHintShowed, setIsHintShowed] = useState(false);
-  // const [isFinished, setIsFinished] = useState(false);
+  const [isFinished, setIsFinished] = useState(false);
+  const [numOfCorrect, setNumOfCorrect] = useState(0);
   // const [isCorrect, setIsCorrect] = useState("");
+
+  useEffect(() => {
+    props.setIsPreMissionPages(false);
+    setNumOfCorrect(0);
+    setIsFinished(false);
+  }, []);
 
   useEffect(() => {
     setCurrText(currLetter.question);
@@ -99,26 +135,33 @@ function GamePage(props) {
     setIsHintShowed(false);
   }, [props.text]);
 
+  //check if game is over
+  useEffect(() => {
+    answers.map((input, index) => {
+      if (input.correct) {
+        setNumOfCorrect(numOfCorrect + 1);
+        console.log(numOfCorrect);
+      }
+    });
+    if (numOfCorrect === 9) {
+      setIsFinished(true);
+      console.log("finished");
+    }
+  }, [answers]);
+
+  useEffect(() => {
+    if (isFinished) {
+      console.log("finished");
+      setCurrText(props.finishText);
+    }
+  }, [isFinished]);
+
   useEffect(() => {
     if (isInfoShowed === true) {
       setCurrText(props.text);
       setIsInfoShowed(true);
     }
-    // if (isFinished === true) {
-    //   setCurrText(props.finishText);
-    // }
   }, [isInfoShowed, props.text, props.finishText]);
-
-  useEffect(() => {
-    props.setIsPreMissionPages(false);
-  }, []);
-
-  // useEffect(() => {
-  //   if (isInfoShowed === true) {
-  //     setCurrText(props.text);
-  //     setIsInfoShowed(true);
-  //   }
-  // }, [isHintShowed]);
 
   const handleShowQuestion = (id) => {
     setCurrLetter({
@@ -149,7 +192,7 @@ function GamePage(props) {
           <Markup content={props.title} />
         </h1>
         <div className="text-container">
-          {!isInfoShowed && (
+          {!isInfoShowed && !isFinished && (
             <InfoIcon
               isInfoShowed={isInfoShowed}
               setIsInfoShowed={setIsInfoShowed}
@@ -170,7 +213,9 @@ function GamePage(props) {
           >
             <Markup content={currText} />
           </p>
-          {!isInfoShowed && <HintIcon handleShowHint={handleShowHint} />}
+          {!isInfoShowed && !isFinished && (
+            <HintIcon handleShowHint={handleShowHint} />
+          )}
         </div>
         <div
           className={`hint-container-wrapper ${
@@ -193,9 +238,12 @@ function GamePage(props) {
               <InputField
                 className="letter-input letter0"
                 maxLength={1}
-                value={ans0}
+                // value={ans0}
+                value={answers[0]}
                 id={0}
-                setanswer={setAns0}
+                // setanswer={setAns0}
+                answers={answers}
+                setanswer={setAnswers}
                 handleShowQuestion={handleShowQuestion}
                 setIsInfoShowed={setIsInfoShowed}
                 arrLetters={arrLetters}
@@ -206,9 +254,11 @@ function GamePage(props) {
               <InputField
                 className="letter-input letter1"
                 maxLength={1}
-                value={ans1}
+                value={answers[1]}
                 id={1}
-                setanswer={setAns1}
+                answers={answers}
+                setanswer={setAnswers}
+                // setanswer={setAns1}
                 handleShowQuestion={handleShowQuestion}
                 setIsInfoShowed={setIsInfoShowed}
                 arrLetters={arrLetters}
@@ -219,9 +269,10 @@ function GamePage(props) {
               <InputField
                 className="letter-input letter2"
                 maxLength={1}
-                value={ans2}
+                value={answers[2]}
                 id={2}
-                setanswer={setAns2}
+                answers={answers}
+                setanswer={setAnswers}
                 handleShowQuestion={handleShowQuestion}
                 setIsInfoShowed={setIsInfoShowed}
                 arrLetters={arrLetters}
@@ -234,9 +285,10 @@ function GamePage(props) {
               <InputField
                 className="letter-input lette3"
                 maxLength={1}
-                value={ans3}
                 id={3}
-                setanswer={setAns3}
+                value={answers[3]}
+                answers={answers}
+                setanswer={setAnswers}
                 handleShowQuestion={handleShowQuestion}
                 setIsInfoShowed={setIsInfoShowed}
                 arrLetters={arrLetters}
@@ -247,9 +299,10 @@ function GamePage(props) {
               <InputField
                 className="letter-input letter4"
                 maxLength={1}
-                value={ans4}
                 id={4}
-                setanswer={setAns4}
+                value={answers[4]}
+                answers={answers}
+                setanswer={setAnswers}
                 handleShowQuestion={handleShowQuestion}
                 setIsInfoShowed={setIsInfoShowed}
                 arrLetters={arrLetters}
@@ -260,9 +313,10 @@ function GamePage(props) {
               <InputField
                 className="letter-input letter5"
                 maxLength={1}
-                value={ans5}
                 id={5}
-                setanswer={setAns5}
+                value={answers[5]}
+                answers={answers}
+                setanswer={setAnswers}
                 handleShowQuestion={handleShowQuestion}
                 setIsInfoShowed={setIsInfoShowed}
                 arrLetters={arrLetters}
@@ -273,9 +327,10 @@ function GamePage(props) {
               <InputField
                 className="letter-input letter6"
                 maxLength={1}
-                value={ans6}
                 id={6}
-                setanswer={setAns6}
+                value={answers[6]}
+                answers={answers}
+                setanswer={setAnswers}
                 handleShowQuestion={handleShowQuestion}
                 setIsInfoShowed={setIsInfoShowed}
                 arrLetters={arrLetters}
@@ -286,9 +341,10 @@ function GamePage(props) {
               <InputField
                 className="letter-input letter7"
                 maxLength={1}
-                value={ans7}
                 id={7}
-                setanswer={setAns7}
+                value={answers[7]}
+                answers={answers}
+                setanswer={setAnswers}
                 handleShowQuestion={handleShowQuestion}
                 setIsInfoShowed={setIsInfoShowed}
                 arrLetters={arrLetters}
@@ -299,9 +355,10 @@ function GamePage(props) {
               <InputField
                 className="letter-input letter8"
                 maxLength={1}
-                value={ans8}
                 id={8}
-                setanswer={setAns8}
+                value={answers[8]}
+                answers={answers}
+                setanswer={setAnswers}
                 handleShowQuestion={handleShowQuestion}
                 setIsInfoShowed={setIsInfoShowed}
                 arrLetters={arrLetters}

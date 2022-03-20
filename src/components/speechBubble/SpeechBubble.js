@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./SpeechBubble.css";
 // import { gsap } from "gsap";
 import { Markup } from "interweave";
-import Typewriter from "typewriter-effect";
+// import Typewriter from "typewriter-effect";
 import { AnimatePresence, motion } from "framer-motion";
 // import TypeWriterEffect from "react-typewriter-effect";
 
@@ -78,7 +78,10 @@ function SpeechBubble(props) {
           />
         )} */}
 
-          <Markup content={props.text} />
+          <Markup
+            content={currText}
+            // content={props.text}
+          />
         </div>
       </motion.div>
     </AnimatePresence>

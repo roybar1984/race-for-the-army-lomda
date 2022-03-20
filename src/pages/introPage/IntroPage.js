@@ -21,6 +21,10 @@ function IntroPage(props) {
     props.setIsHidden("hidden");
     props.setTextIndex(1);
     props.setIsPreMissionPages(false);
+    return () => {
+      props.setIsPreMissionPages(false);
+      props.setIsStarted(true);
+    };
   }, []);
 
   useEffect(() => {

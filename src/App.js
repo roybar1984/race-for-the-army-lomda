@@ -24,6 +24,10 @@ function App({}) {
     setTextIndex(1);
     setIsPreMissionPages(false);
     setIsStarted(false);
+    return () => {
+      setIsPreMissionPages(false);
+      setIsStarted(true);
+    };
   }, []);
 
   // const location = useLocation();
@@ -63,6 +67,8 @@ function App({}) {
                   wait={800}
                   isPreMissionPages={isPreMissionPages}
                   setIsPreMissionPages={setIsPreMissionPages}
+                  isStarted={isStarted}
+                  setIsStarted={setIsStarted}
                 />
               }
             ></Route>

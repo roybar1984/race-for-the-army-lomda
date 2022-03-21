@@ -79,7 +79,7 @@ function IntroPage(props) {
             <h1 className="mission-title">ברוכים הבאים למירוץ לצה״לֹ</h1>
           )} */}
         <SpeechBubble
-          delay={2}
+          delay={1}
           duration={3}
           animationY={220}
           textIndex={props.textIndex}
@@ -108,7 +108,7 @@ function IntroPage(props) {
             initial="initial"
             animate="animate"
             exit="exit"
-            transition={{ duration: 2, delay: 8 }}
+            transition={{ duration: 2, delay: 9 }}
             className="next-btn"
             onClick={handleClickNext}
           >
@@ -127,7 +127,7 @@ function IntroPage(props) {
               initial="initial"
               animate="animate"
               exit="exit"
-              transition={{ duration: 2, delay: 4 }}
+              transition={{ duration: 2, delay: 6.5 }}
             >
               {props.Data[props.textIndex].btnText}
             </motion.button>
@@ -139,7 +139,7 @@ function IntroPage(props) {
             initial="initial"
             animate="animate"
             exit="exit"
-            transition={{ duration: 2, delay: 4 }}
+            transition={{ duration: 2, delay: 6.5 }}
             className="back-to-explenation-btn"
             onClick={handleClickPrevText}
           >

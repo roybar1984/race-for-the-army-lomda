@@ -35,17 +35,9 @@ function IntroPage(props) {
     };
   }, []);
 
-  // useEffect(() => {
-  //   // setTimeout(function () {
-  //   //   props.setIsHidden((prevState) => {
-  //   //     prevState = "";
-  //   //   });
-  //   // }, props.wait);
-  // }, []);
-
   const handleClickNext = (event) => {
     //if the btn is vissible move to the rellevant page
-    if (event.target.style.opacity > 0.5) {
+    if (event.target.style.opacity > 0.3) {
       //move to game if clicked to start on the last index
       if (props.textIndex === 4) {
         navigate("/game", { replace: true });
@@ -54,6 +46,13 @@ function IntroPage(props) {
       //if on the first pre-mission page
       if (props.textIndex === 2) {
         props.setIsPreMissionPages(true);
+        props.setIsHidden("hidden");
+
+        setTimeout(function () {
+          props.setIsHidden((prevState) => {
+            prevState = "";
+          });
+        }, props.wait);
       }
 
       //increment the index if is not the last one

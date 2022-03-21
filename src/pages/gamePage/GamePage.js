@@ -115,12 +115,10 @@ function GamePage(props) {
   const [isInfoShowed, setIsInfoShowed] = useState(true);
   const [isHintShowed, setIsHintShowed] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
-  const [numOfCorrect, setNumOfCorrect] = useState(0);
   // const [isCorrect, setIsCorrect] = useState("");
 
   useEffect(() => {
     props.setIsPreMissionPages(false);
-    setNumOfCorrect(0);
     setIsFinished(false);
   }, []);
 
@@ -136,22 +134,22 @@ function GamePage(props) {
   }, [props.text]);
 
   //check if game is over
-  useEffect(() => {
-    answers.map((input, index) => {
-      // if(input.inputText !== "") {
+  // useEffect(() => {
+  //   answers.map((input, index) => {
+  //     // if(input.inputText !== "") {
 
-      // }
-      console.log(input);
-      if (input.correct === true) {
-        setNumOfCorrect(numOfCorrect + 1);
-        console.log(numOfCorrect);
-      }
-    });
-    if (numOfCorrect === 9) {
-      setIsFinished(true);
-      console.log("finished");
-    }
-  }, [answers]);
+  //     // }
+  //     console.log(input);
+  //     if (input.correct === true) {
+  //       setNumOfCorrect(numOfCorrect + 1);
+  //       console.log(numOfCorrect);
+  //     }
+  //   });
+  //   if (numOfCorrect === 9) {
+  //     setIsFinished(true);
+  //     console.log("finished");
+  //   }
+  // }, [answers]);
 
   useEffect(() => {
     if (isFinished) {
@@ -251,6 +249,8 @@ function GamePage(props) {
                 setIsInfoShowed={setIsInfoShowed}
                 arrLetters={arrLetters}
                 name="ssn-0"
+                isFinished={isFinished}
+                setIsFinished={setIsFinished}
                 // isCorrect={isCorrect}
                 // setIsCorrect={setIsCorrect}
               />
@@ -266,6 +266,8 @@ function GamePage(props) {
                 setIsInfoShowed={setIsInfoShowed}
                 arrLetters={arrLetters}
                 name="ssn-1"
+                isFinished={isFinished}
+                setIsFinished={setIsFinished}
                 // isCorrect={isCorrect}
                 // setIsCorrect={setIsCorrect}
               />
@@ -281,6 +283,8 @@ function GamePage(props) {
                 setIsInfoShowed={setIsInfoShowed}
                 arrLetters={arrLetters}
                 name="ssn-2"
+                isFinished={isFinished}
+                setIsFinished={setIsFinished}
                 // isCorrect={isCorrect}
                 // setIsCorrect={setIsCorrect}
               />
@@ -298,6 +302,8 @@ function GamePage(props) {
                 setIsInfoShowed={setIsInfoShowed}
                 arrLetters={arrLetters}
                 name="ssn-3"
+                isFinished={isFinished}
+                setIsFinished={setIsFinished}
                 // isCorrect={isCorrect}
                 // setIsCorrect={setIsCorrect}
               />
@@ -312,6 +318,8 @@ function GamePage(props) {
                 setIsInfoShowed={setIsInfoShowed}
                 arrLetters={arrLetters}
                 name="ssn-4"
+                isFinished={isFinished}
+                setIsFinished={setIsFinished}
                 // isCorrect={isCorrect}
                 // setIsCorrect={setIsCorrect}
               />
@@ -327,6 +335,8 @@ function GamePage(props) {
                 setIsInfoShowed={setIsInfoShowed}
                 arrLetters={arrLetters}
                 name="ssn-5"
+                isFinished={isFinished}
+                setIsFinished={setIsFinished}
                 // isCorrect={isCorrect}
                 // setIsCorrect={setIsCorrect}
               />
@@ -342,6 +352,8 @@ function GamePage(props) {
                 setIsInfoShowed={setIsInfoShowed}
                 arrLetters={arrLetters}
                 name="ssn-6"
+                isFinished={isFinished}
+                setIsFinished={setIsFinished}
                 // isCorrect={isCorrect}
                 // setIsCorrect={setIsCorrect}
               />
@@ -357,6 +369,8 @@ function GamePage(props) {
                 setIsInfoShowed={setIsInfoShowed}
                 arrLetters={arrLetters}
                 name="ssn-7"
+                isFinished={isFinished}
+                setIsFinished={setIsFinished}
                 // isCorrect={isCorrect}
                 // setIsCorrect={setIsCorrect}
               />
@@ -372,6 +386,8 @@ function GamePage(props) {
                 setIsInfoShowed={setIsInfoShowed}
                 arrLetters={arrLetters}
                 name="ssn-8"
+                isFinished={isFinished}
+                setIsFinished={setIsFinished}
                 // isCorrect={isCorrect}
                 // setIsCorrect={setIsCorrect}
               />

@@ -6,6 +6,18 @@ function InputField(props) {
   const [isCorrect, setIsCorrect] = useState();
   const [isClicked, setIsClicked] = useState(false);
 
+  const checkIfFinished = () => {
+    props.answers.map((input, index) => {
+      if (input.correct === false) {
+        console.log("not finished");
+        props.setIsFinished(false);
+      } else {
+        props.setIsFinished(true);
+        console.log("finished");
+      }
+    });
+  };
+
   return (
     <>
       <input
@@ -63,6 +75,10 @@ function InputField(props) {
 
           //update the external original state
           props.setanswer(newArrAnswers);
+          checkIfFinished();
+
+          // props.setIsFinished(true);
+          // console.log("finished");
         }}
       />
     </>

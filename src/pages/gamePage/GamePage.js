@@ -138,7 +138,11 @@ function GamePage(props) {
   //check if game is over
   useEffect(() => {
     answers.map((input, index) => {
-      if (input.correct) {
+      // if(input.inputText !== "") {
+
+      // }
+      console.log(input);
+      if (input.correct === true) {
         setNumOfCorrect(numOfCorrect + 1);
         console.log(numOfCorrect);
       }
@@ -236,12 +240,11 @@ function GamePage(props) {
           <div className="letter-container">
             <div className="letters-row top-row-letters">
               <InputField
+                autoComplete="off"
                 className="letter-input letter0"
                 maxLength={1}
-                // value={ans0}
                 value={answers[0]}
                 id={0}
-                // setanswer={setAns0}
                 answers={answers}
                 setanswer={setAnswers}
                 handleShowQuestion={handleShowQuestion}
@@ -252,13 +255,13 @@ function GamePage(props) {
                 // setIsCorrect={setIsCorrect}
               />
               <InputField
+                autoComplete="off"
                 className="letter-input letter1"
                 maxLength={1}
                 value={answers[1]}
                 id={1}
                 answers={answers}
                 setanswer={setAnswers}
-                // setanswer={setAns1}
                 handleShowQuestion={handleShowQuestion}
                 setIsInfoShowed={setIsInfoShowed}
                 arrLetters={arrLetters}
@@ -267,6 +270,7 @@ function GamePage(props) {
                 // setIsCorrect={setIsCorrect}
               />
               <InputField
+                autoComplete="off"
                 className="letter-input letter2"
                 maxLength={1}
                 value={answers[2]}
@@ -283,6 +287,7 @@ function GamePage(props) {
             </div>
             <div className="letters-row low-row-letters">
               <InputField
+                autoComplete="off"
                 className="letter-input lette3"
                 maxLength={1}
                 id={3}
@@ -311,6 +316,7 @@ function GamePage(props) {
                 // setIsCorrect={setIsCorrect}
               />
               <InputField
+                autoComplete="off"
                 className="letter-input letter5"
                 maxLength={1}
                 id={5}
@@ -325,6 +331,7 @@ function GamePage(props) {
                 // setIsCorrect={setIsCorrect}
               />
               <InputField
+                autoComplete="off"
                 className="letter-input letter6"
                 maxLength={1}
                 id={6}
@@ -339,6 +346,7 @@ function GamePage(props) {
                 // setIsCorrect={setIsCorrect}
               />
               <InputField
+                autoComplete="off"
                 className="letter-input letter7"
                 maxLength={1}
                 id={7}
@@ -353,6 +361,7 @@ function GamePage(props) {
                 // setIsCorrect={setIsCorrect}
               />
               <InputField
+                autoComplete="off"
                 className="letter-input letter8"
                 maxLength={1}
                 id={8}
@@ -366,118 +375,6 @@ function GamePage(props) {
                 // isCorrect={isCorrect}
                 // setIsCorrect={setIsCorrect}
               />
-              {/* <input
-            // className={`letter-input letter0 ${
-            //   isCorrect ? "correct" : "wrong"
-            // }`}
-            className="letter-input letter0"
-            maxLength={1}
-            value={ans0}
-            id={0}
-            setAnswer={setAns0}
-            // onChange={(event) => {
-            //   setAns0(event.target.value);
-            //   // if(ans0 === )
-            // }}
-            handleShowQuestion={handleShowQuestion}
-            setIsInfoShowed={setIsInfoShowed}
-            // onClick={() => {
-            //   handleShowQuestion(0);
-            //   setIsInfoShowed(false);
-            // }}
-          /> */}
-              {/* <input
-            className="letter-input letter1"
-            maxLength={1}
-            value={ans1}
-            id={1}
-            onChange={(event) => setAns1(event.target.value)}
-            onClick={() => {
-              handleShowQuestion(1);
-              setIsInfoShowed(false);
-            }}
-          />
-          <input
-            className="letter-input letter2"
-            maxLength={1}
-            value={ans2}
-            id={2}
-            onChange={(event) => setAns2(event.target.value)}
-            onClick={() => {
-              handleShowQuestion(2);
-              setIsInfoShowed(false);
-            }}
-          />
-        </div>
-        <div className="letters-row low-row-letters">
-          <input
-            className="letter-input letter3"
-            maxLength={1}
-            value={ans3}
-            id={3}
-            onClick={() => {
-              handleShowQuestion(3);
-              setIsInfoShowed(false);
-            }}
-            onChange={(event) => setAns3(event.target.value)}
-          />
-          <input
-            className="letter-input letter4"
-            maxLength={1}
-            value={ans4}
-            id={4}
-            onClick={() => {
-              handleShowQuestion(4);
-              setIsInfoShowed(false);
-            }}
-            onChange={(event) => setAns4(event.target.value)}
-          />
-          <input
-            className="letter-input letter5"
-            maxLength={1}
-            value={ans5}
-            id={5}
-            onClick={() => {
-              handleShowQuestion(5);
-              setIsInfoShowed(false);
-            }}
-            onChange={(event) => setAns5(event.target.value)}
-          />
-          <input
-            className="letter-input letter6"
-            maxLength={1}
-            onClick={() => {
-              handleShowQuestion(6);
-              setIsInfoShowed(false);
-            }}
-            value={ans6}
-            id={6}
-            onChange={(event) => {
-              setAns6(event.target.value);
-            }}
-          />
-          <input
-            className="letter-input letter7"
-            maxLength={1}
-            value={ans7}
-            id={7}
-            onChange={(event) => setAns7(event.target.value)}
-            onClick={() => {
-              handleShowQuestion(7);
-              setIsInfoShowed(false);
-            }}
-          />
-          <input
-            className="letter-input letter8"
-            maxLength={1}
-            value={ans8}
-            id={8}
-            onChange={(event) => setAns8(event.target.value)}
-            onClick={() => {
-              handleShowQuestion(8);
-              setIsInfoShowed(false);
-            }}
-          /> */}
             </div>
           </div>
         </div>

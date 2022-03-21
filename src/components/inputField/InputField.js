@@ -63,11 +63,7 @@ function InputField(props) {
 
           //update the external original state
           props.setanswer(newArrAnswers);
-          console.log(newArrAnswers);
         }}
-        // value={ans0}
-        // onChange={handleChange0}
-        // onChange={() => handleChange(0)}
       />
     </>
   );

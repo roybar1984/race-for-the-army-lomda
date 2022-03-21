@@ -6,7 +6,6 @@ import { AnimatePresence, motion } from "framer-motion";
 // import TypeWriterEffect from "react-typewriter-effect";
 
 function SpeechBubble(props) {
-  console.log(props.textIndex);
   const [currText, setCurrText] = useState(props.text);
 
   useEffect(() => {

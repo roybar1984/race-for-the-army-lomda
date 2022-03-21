@@ -1,18 +1,13 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import OpeningPage from "./pages/openingPage/OpeningPage";
 import IntroPage from "./pages/introPage/IntroPage";
 import GamePage from "./pages/gamePage/GamePage";
 import Data from "./data/text.json";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
-function App({}) {
+function App() {
   // const location = useLocation();
   const [textIndex, setTextIndex] = useState(1);
   const [isHidden, setIsHidden] = useState("hidden");
@@ -72,7 +67,6 @@ function App({}) {
                 />
               }
             ></Route>
-
             <Route
               exact
               path="/game"

@@ -10,9 +10,9 @@ import { motion } from "framer-motion";
 
 function IntroPage(props) {
   const btnAnimations = {
-    initial: { opacity: 0, display: "none" },
-    animate: { opacity: 1, display: "block" },
-    exit: { opacity: 0, display: "none" },
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
   };
 
   const navigate = useNavigate();
@@ -22,34 +22,44 @@ function IntroPage(props) {
     props.setTextIndex(1);
     props.setIsPreMissionPages(false);
     props.setIsStarted(true);
+
+    setTimeout(function () {
+      props.setIsHidden((prevState) => {
+        prevState = "";
+      });
+    }, props.wait);
+
     return () => {
       props.setIsPreMissionPages(false);
       props.setIsStarted(true);
     };
   }, []);
 
-  useEffect(() => {
-    setTimeout(function () {
-      props.setIsHidden((prevState) => {
-        prevState = "";
-      });
-    }, props.wait);
-  }, []);
+  // useEffect(() => {
+  //   // setTimeout(function () {
+  //   //   props.setIsHidden((prevState) => {
+  //   //     prevState = "";
+  //   //   });
+  //   // }, props.wait);
+  // }, []);
 
   const handleClickNext = (event) => {
-    //move to game if clicked to start on the last index
-    if (props.textIndex === 4) {
-      navigate("/game", { replace: true });
-    }
+    //if the btn is vissible move to the rellevant page
+    if (event.target.style.opacity > 0.5) {
+      //move to game if clicked to start on the last index
+      if (props.textIndex === 4) {
+        navigate("/game", { replace: true });
+      }
 
-    //if on the first pre-mission page
-    if (props.textIndex === 2) {
-      props.setIsPreMissionPages(true);
-    }
+      //if on the first pre-mission page
+      if (props.textIndex === 2) {
+        props.setIsPreMissionPages(true);
+      }
 
-    //increment the index if is not the last one
-    if (props.textIndex < 4) {
-      props.setTextIndex(props.textIndex + 1);
+      //increment the index if is not the last one
+      if (props.textIndex < 4) {
+        props.setTextIndex(props.textIndex + 1);
+      }
     }
   };
 

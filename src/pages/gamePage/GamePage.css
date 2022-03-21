@@ -216,12 +216,23 @@
 }
 
 .white-answers-wrapper {
-  width: 100vw;
+  /* width: 100vw;
   height: 30vh;
   background-color: white;
   position: absolute;
   bottom: -10vh;
   height: 37vh;
+  border-radius: 2em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; */
+  width: 100vw;
+  height: 30vh;
+  background-color: white;
+  position: absolute;
+  bottom: -3vh;
+  height: 44vh;
   border-radius: 2em;
   display: flex;
   flex-direction: row;
@@ -291,7 +302,7 @@
     padding-bottom: 4em;
     min-height: 30vh;
     position: absolute;
-    bottom: 20vh;
+    bottom: 33vh;
     /* top: 39vh; */
   }
 

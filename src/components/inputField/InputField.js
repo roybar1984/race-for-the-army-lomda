@@ -7,23 +7,16 @@ function InputField(props) {
   const [isClicked, setIsClicked] = useState(false);
 
   const checkIfFinished = () => {
-    console.log(props.answers);
     let isAllTrue = true;
     props.answers.map((input, index) => {
       if (input.correct === false) {
         isAllTrue = false;
-        // console.log(input);
-        console.log("not finished");
         props.setIsFinished(false);
       }
     });
     if (isAllTrue) {
       props.setIsFinished(true);
     }
-
-    // if (props.isFinished) {
-    //   console.log("finished");
-    // }
   };
 
   const handleInputChange = (event) => {

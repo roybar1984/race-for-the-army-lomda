@@ -161,7 +161,6 @@ function GamePage(props) {
 
   useEffect(() => {
     if (isFinished) {
-      console.log("finished");
       setCurrText(props.finishText);
       setShowConfetti(true);
       setTimeout(function () {

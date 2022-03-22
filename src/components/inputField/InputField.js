@@ -8,15 +8,19 @@ function InputField(props) {
 
   const checkIfFinished = () => {
     console.log(props.answers);
+    let isAllTrue = true;
     props.answers.map((input, index) => {
       if (input.correct === false) {
-        console.log(input);
+        isAllTrue = false;
+        // console.log(input);
         console.log("not finished");
         props.setIsFinished(false);
-        return;
       }
     });
-    props.setIsFinished(true);
+    if (isAllTrue) {
+      props.setIsFinished(true);
+    }
+
     // if (props.isFinished) {
     //   console.log("finished");
     // }

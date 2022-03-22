@@ -1,7 +1,7 @@
 .character {
   position: absolute;
   /* top: 70vh; */
-  bottom: 1vh;
+  bottom: 0vh;
   right: 0vw;
   width: 50vw;
   height: 29vh;

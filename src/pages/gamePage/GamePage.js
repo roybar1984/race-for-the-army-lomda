@@ -7,7 +7,12 @@ import InfoIcon from "../../svg/infoIcon/InfoIcon";
 import HintIcon from "../../svg/hintIcon/HintIcon";
 import CloseBtn from "../../svg/closeBtn/CloseBtn";
 
+// import useWindowSize from "react-use/lib/useWindowSize";
+import Confetti from "react-confetti";
+
 function GamePage(props) {
+  // const { width, height } = useWindowSize();
+
   const arrLetters = [
     {
       question: "בטור הראשון של השמות, השם הראשון שמופיע, האות השנייה",
@@ -115,11 +120,14 @@ function GamePage(props) {
   const [isInfoShowed, setIsInfoShowed] = useState(true);
   const [isHintShowed, setIsHintShowed] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
+
+  const [showConfetti, setShowConfetti] = useState(false);
   // const [isCorrect, setIsCorrect] = useState("");
 
   useEffect(() => {
     props.setIsPreMissionPages(false);
     setIsFinished(false);
+    setShowConfetti(false);
   }, []);
 
   useEffect(() => {
@@ -155,6 +163,10 @@ function GamePage(props) {
     if (isFinished) {
       console.log("finished");
       setCurrText(props.finishText);
+      setShowConfetti(true);
+      setTimeout(function () {
+        setShowConfetti(false);
+      }, 5000);
     }
   }, [isFinished]);
 
@@ -185,6 +197,9 @@ function GamePage(props) {
 
   return (
     <AnimatedPage>
+      {isFinished && showConfetti && (
+        <Confetti width={window.innerWidth} height={window.innerHeight} />
+      )}
       <div
         className="game-page-container"
         // mission1-background"
@@ -221,18 +236,29 @@ function GamePage(props) {
         </div>
         <div
           className={`hint-container-wrapper ${
-            isHintShowed ? "hint-container-showed " : "hint-container-hidden"
+            isHintShowed || isFinished
+              ? "hint-container-showed "
+              : "hint-container-hidden"
           }`}
         >
-          <div className="hint-container">
-            <h1 className="game-title hint-title">רמז</h1>
-            <CloseBtn
-              className="close-hint-btn"
-              handleShowHint={handleShowHint}
-            />
-            {/* <div className="close-hint-btn" onClick={handleShowHint}></div> */}
-            <p className="hint-text">{currLetter.hint}</p>
-          </div>
+          {isFinished ? (
+            <div className="congratulations-container">
+              <p className="hint-text congratulation-text">
+                {" "}
+                <Markup content={props.finishText} />
+              </p>
+            </div>
+          ) : (
+            <div className="hint-container">
+              <h1 className="game-title hint-title">רמז</h1>
+              <CloseBtn
+                className="close-hint-btn"
+                handleShowHint={handleShowHint}
+              />
+              {/* <div className="close-hint-btn" onClick={handleShowHint}></div> */}
+              <p className="hint-text">{currLetter.hint}</p>
+            </div>
+          )}
         </div>
         <div className="white-answers-wrapper">
           <div className="letter-container">

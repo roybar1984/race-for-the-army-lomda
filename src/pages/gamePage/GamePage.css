@@ -71,7 +71,7 @@
   width: 70%;
   margin: 0;
   position: relative;
-  bottom: 8.5vh;
+  bottom: 5.2vh;
   /* margin-top: 7vh; */
   /* margin-bottom: 10vh; */
 }
@@ -151,7 +151,7 @@
   height: fit-content;
   min-height: 18vh;
   position: absolute;
-  top: 53vh;
+  top: 42vh;
   /* position: absolute;
     top: 42vh;
     right: 27.5vw; */
@@ -227,12 +227,13 @@
   flex-direction: row;
   align-items: center;
   justify-content: center; */
-  width: 100vw;
+  box-sizing: border-box;
+  width: 100%;
   height: 30vh;
   background-color: white;
   position: absolute;
   bottom: -3vh;
-  height: 44vh;
+  height: 41vh;
   border-radius: 2em;
   display: flex;
   flex-direction: row;
@@ -258,6 +259,48 @@
   animation-delay: 4s;
   /* transform: scale(1.2);
     /* margin-top: auto; */
+}
+
+.congratulations-container {
+  width: 78%;
+  border-radius: 3rem;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 18vh;
+  height: 23vh;
+  position: absolute;
+  top: 27vh;
+  right: 3.5vw;
+  background-color: #bce5fd;
+  border: 1px solid #084365;
+  /* padding: 10px; */
+  box-shadow: 5px 10px #084365;
+}
+
+.congratulation-text {
+  font-size: 7.8vw;
+}
+
+.congratulation-title {
+  animation: title-growth 1s ease;
+  animation-iteration-count: 1;
+  font-size: 10vw;
+  color: #5d8627;
+}
+
+@keyframes title-growth {
+  0% {
+    font-size: 7vw;
+  }
+
+  100% {
+    font-size: 10vw;
+  }
 }
 
 @keyframes scale-info {
@@ -288,7 +331,21 @@
   }
 
   .text-container {
-    width: 92vw;
+    /* width: 92vw;
+    height: 36vh;
+
+    border-radius: 2rem;
+    padding: 0.3em 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5vh;
+    padding-bottom: 4em;
+    min-height: 30vh;
+    position: absolute;
+    bottom: 33vh; */
+
+    width: 89%;
     height: 36vh;
     /* border: solid #0000ff; */
     border-radius: 2rem;
@@ -303,12 +360,13 @@
     min-height: 30vh;
     position: absolute;
     bottom: 33vh;
+    right: 0;
     /* top: 39vh; */
   }
 
   .text-paragrapgh {
     width: 95%;
-    font-size: 6.5vw;
+    font-size: 6vw;
   }
 
   .letter-container {
@@ -319,7 +377,7 @@
     width: 70%;
     margin: 0;
     position: relative;
-    bottom: 3.2vh;
+    bottom: 5.2vh;
     /* margin-top: 7vh; */
     /* margin-bottom: 10vh;
 
@@ -441,7 +499,7 @@
     min-height: 18vh;
     height: 17vh;
     position: absolute;
-    top: 53vh;
+    top: 42vh;
     right: 4.5vw;
   }
 

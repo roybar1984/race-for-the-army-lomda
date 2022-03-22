@@ -275,7 +275,7 @@
   height: 23vh;
   position: absolute;
   top: 27vh;
-  right: 3.5vw;
+  right: 5.5vw;
   background-color: #bce5fd;
   border: 1px solid #084365;
   /* padding: 10px; */
@@ -345,7 +345,7 @@
     position: absolute;
     bottom: 33vh; */
 
-    width: 89%;
+    width: 93%;
     height: 36vh;
     /* border: solid #0000ff; */
     border-radius: 2rem;

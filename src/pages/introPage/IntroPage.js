@@ -29,25 +29,6 @@ function IntroPage(props) {
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    props.setIsHidden("hidden");
-    props.setTextIndex(1);
-    props.setIsPreMissionPages(false);
-    props.setIsStarted(true);
-
-    setTimeout(function () {
-      props.setIsHidden((prevState) => {
-        prevState = "";
-      });
-    }, props.wait);
-
-    return () => {
-      props.setIsPreMissionPages(false);
-      props.setIsStarted(true);
-      props.setTextIndex(1);
-    };
-  }, []);
-
   const handleClickNext = (event) => {
     //if the btn is vissible move to the rellevant page
     if (event.target.style.opacity > 0.3) {
@@ -88,6 +69,25 @@ function IntroPage(props) {
       }, props.wait);
     }
   };
+
+    useEffect(() => {
+      props.setIsHidden("hidden");
+      props.setTextIndex(1);
+      props.setIsPreMissionPages(false);
+      props.setIsStarted(true);
+
+      setTimeout(function () {
+        props.setIsHidden((prevState) => {
+          prevState = "";
+        });
+      }, props.wait);
+
+      return () => {
+        props.setIsPreMissionPages(false);
+        props.setIsStarted(true);
+        props.setTextIndex(1);
+      };
+    }, []);
   return (
     <AnimatedPage>
       <div className="bubble-container">

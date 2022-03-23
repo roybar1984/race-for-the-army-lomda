@@ -117,12 +117,12 @@ function GamePage(props) {
   const [isHintShowed, setIsHintShowed] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
 
-  const [showConfetti, setShowConfetti] = useState(false);
+  // const [showConfetti, setShowConfetti] = useState(false);
 
   useEffect(() => {
     props.setIsPreMissionPages(false);
     setIsFinished(false);
-    setShowConfetti(false);
+    // setShowConfetti(false);
   }, [props]);
 
   useEffect(() => {
@@ -139,10 +139,10 @@ function GamePage(props) {
   useEffect(() => {
     if (isFinished) {
       setCurrText(props.finishText);
-      setShowConfetti(true);
-      setTimeout(function () {
-        setShowConfetti(false);
-      }, 5000);
+      // setShowConfetti(true);
+      // setTimeout(function () {
+      //   setShowConfetti(false);
+      // }, 5000);
     }
   }, [isFinished, props.finishText]);
 
@@ -173,8 +173,14 @@ function GamePage(props) {
 
   return (
     <AnimatedPage>
-      {isFinished && showConfetti && (
-        <Confetti width={window.innerWidth} height={window.innerHeight} />
+      {isFinished && (
+        <Confetti
+          width={window.innerWidth}
+          height={window.innerHeight}
+          numberOfPieces={400}
+          tweenDuration={6000}
+          recycle={false}
+        />
       )}
       <div className="game-page-container">
         <h1 className="game-title">
@@ -270,6 +276,7 @@ function GamePage(props) {
                 arrLetters={arrLetters}
                 name="ssn-2"
                 isFinished={isFinished}
+                setIsFinished={setIsFinished}
               />
             </div>
             <div className="letters-row low-row-letters">

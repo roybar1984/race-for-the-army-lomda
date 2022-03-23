@@ -13,11 +13,6 @@ function OpeningPage(props) {
   const openingBtn = useRef(null);
 
   useEffect(() => {
-    props.setIsPreMissionPages(false);
-    props.setIsStarted(false);
-  }, []);
-
-  useEffect(() => {
     const openingAnimationTl = gsap.timeline();
     openingAnimationTl
       .from(title1.current, {
@@ -54,6 +49,11 @@ function OpeningPage(props) {
         },
         "+=0.5"
       );
+  }, []);
+
+  useEffect(() => {
+    props.setIsPreMissionPages(false);
+    props.setIsStarted(false);
   }, []);
 
   function handleStartLomda(event) {

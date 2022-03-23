@@ -144,7 +144,7 @@ function GamePage(props) {
         setShowConfetti(false);
       }, 5000);
     }
-  }, [isFinished]);
+  }, [isFinished, props.finishText]);
 
   useEffect(() => {
     if (isInfoShowed === true) {

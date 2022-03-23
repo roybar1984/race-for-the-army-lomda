@@ -19,7 +19,13 @@ function SpeechBubble(props) {
       delay: props.delay,
       ease: "sine",
     });
-  }, [props.textIndex]);
+  }, [
+    props.textIndex,
+    props.animationY,
+    props.delay,
+    props.duration,
+    props.text,
+  ]);
 
   return (
     <div ref={bubbleRef} className={`speech-bubble ${props.className}`}>

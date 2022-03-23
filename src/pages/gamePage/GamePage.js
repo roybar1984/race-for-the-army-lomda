@@ -141,24 +141,6 @@ function GamePage(props) {
     setIsHintShowed(false);
   }, [props.text]);
 
-  //check if game is over
-  // useEffect(() => {
-  //   answers.map((input, index) => {
-  //     // if(input.inputText !== "") {
-
-  //     // }
-  //     console.log(input);
-  //     if (input.correct === true) {
-  //       setNumOfCorrect(numOfCorrect + 1);
-  //       console.log(numOfCorrect);
-  //     }
-  //   });
-  //   if (numOfCorrect === 9) {
-  //     setIsFinished(true);
-  //     console.log("finished");
-  //   }
-  // }, [answers]);
-
   useEffect(() => {
     if (isFinished) {
       setCurrText(props.finishText);

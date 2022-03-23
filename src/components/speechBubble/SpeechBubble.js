@@ -22,11 +22,11 @@ function SpeechBubble(props) {
     });
   }, [props.textIndex]);
 
-  const animations = {
-    initial: { opacity: 0, y: props.animationY },
-    animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0 },
-  };
+  // const animations = {
+  //   initial: { opacity: 0, y: props.animationY },
+  //   animate: { opacity: 1, y: 0 },
+  //   exit: { opacity: 0 },
+  // };
   return (
     // <motion.div
     //   variants={animations}

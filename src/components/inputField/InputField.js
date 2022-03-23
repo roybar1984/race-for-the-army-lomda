@@ -8,7 +8,7 @@ function InputField(props) {
 
   const checkIfFinished = () => {
     let isAllTrue = true;
-    props.answers.map((input, index) => {
+    props.answers.forEach((input, index) => {
       if (input.correct === false) {
         isAllTrue = false;
         props.setIsFinished(false);
@@ -17,6 +17,7 @@ function InputField(props) {
     if (isAllTrue) {
       props.setIsFinished(true);
     }
+    return;
   };
 
   const handleInputChange = (event) => {

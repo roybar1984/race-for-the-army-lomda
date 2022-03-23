@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "./IntroPage.css";
-// import { gsap } from "gsap";
+import { gsap } from "gsap";
 import SpeechBubble from "../../components/speechBubble/SpeechBubble";
 import Character from "../../components/character/Character";
 import { Markup } from "interweave";
@@ -9,6 +9,18 @@ import AnimatedPage from "../../components/AnimatedPage";
 import { motion } from "framer-motion";
 
 function IntroPage(props) {
+  const blackDivRef = useRef();
+
+  useEffect(() => {
+    if (props.isHidden) {
+      gsap.from(blackDivRef.current, {
+        opacity: 0,
+        duration: 5,
+        ease: "ease",
+      });
+    }
+  }, [props.isHidden]);
+
   const btnAnimations = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
@@ -69,7 +81,7 @@ function IntroPage(props) {
   return (
     <AnimatedPage>
       <div className="bubble-container">
-        {props.isHidden && <div className="black-div"></div>}
+        {props.isHidden && <div ref={blackDivRef} className="black-div"></div>}
         {props.isPreMissionPages && (
           <h1 className="mission-title">
             <Markup content={props.Data[props.textIndex].title} />

@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./SpeechBubble.css";
 import { Markup } from "interweave";
-// import Typewriter from "typewriter-effect";
 import { gsap } from "gsap";
 // import TypeWriterEffect from "react-typewriter-effect";
 
@@ -19,14 +18,13 @@ function SpeechBubble(props) {
       delay: props.delay,
       ease: "sine",
     });
-  }, [
-    props.textIndex,
-    props.animationY,
-    props.delay,
-    props.duration,
-    props.text,
-  ]);
+  }, [props.textIndex]);
 
+  // const animations = {
+  //   initial: { opacity: 0, y: props.animationY },
+  //   animate: { opacity: 1, y: 0 },
+  //   exit: { opacity: 0 },
+  // };
   return (
     <div ref={bubbleRef} className={`speech-bubble ${props.className}`}>
       <p className="bubble-title">

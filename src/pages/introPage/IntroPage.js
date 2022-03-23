@@ -22,9 +22,9 @@ function IntroPage(props) {
   }, [props.isHidden]);
 
   const btnAnimations = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-    exit: { opacity: 0 },
+    initial: { opacity: 0, visibility: "hidden" },
+    animate: { opacity: 1, visibility: "visible" },
+    exit: { opacity: 0, visibility: "hidden" },
   };
 
   const navigate = useNavigate();
@@ -44,6 +44,7 @@ function IntroPage(props) {
     return () => {
       props.setIsPreMissionPages(false);
       props.setIsStarted(true);
+      props.setTextIndex(1);
     };
   }, []);
 

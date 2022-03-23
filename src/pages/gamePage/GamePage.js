@@ -123,7 +123,7 @@ function GamePage(props) {
     props.setIsPreMissionPages(false);
     setIsFinished(false);
     setShowConfetti(false);
-  }, []);
+  }, [props]);
 
   useEffect(() => {
     setCurrText(currLetter.question);

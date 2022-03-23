@@ -77,6 +77,12 @@ function IntroPage(props) {
   const handleClickPrevText = (event) => {
     props.setTextIndex(3);
     navigate("/intro", { replace: true });
+    props.setIsHidden("hidden");
+    setTimeout(function () {
+      props.setIsHidden((prevState) => {
+        prevState = "";
+      });
+    }, props.wait);
   };
   return (
     <AnimatedPage>
@@ -87,9 +93,6 @@ function IntroPage(props) {
             <Markup content={props.Data[props.textIndex].title} />
           </h1>
         )}
-        {/* {!props.isPreMissionPages && (
-            <h1 className="mission-title">ברוכים הבאים למירוץ לצה״לֹ</h1>
-          )} */}
         <SpeechBubble
           delay={1}
           duration={3}

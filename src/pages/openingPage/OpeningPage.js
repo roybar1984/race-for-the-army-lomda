@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./OpeningPage.css";
 import { gsap } from "gsap";
-// import Button from "../../components/Button/Button";
-// import { Markup } from "interweave";
 import { useNavigate } from "react-router-dom";
 import AnimatedPage from "../../components/AnimatedPage";
 
@@ -59,7 +57,6 @@ function OpeningPage(props) {
   }, []);
 
   function handleStartLomda(event) {
-    // navigate('/home');
     props.setIsStarted(true);
     setTimeout(navigate("./intro"), 1000);
   }
@@ -75,7 +72,6 @@ function OpeningPage(props) {
             המירוץ לצה״ל
           </h3>
         </div>
-        {/* <Link to={"/intro"}> */}
         <button
           onClick={handleStartLomda}
           ref={openingBtn}
@@ -83,8 +79,6 @@ function OpeningPage(props) {
         >
           בואו נתחיל
         </button>
-        {/* </Link> */}
-        {/* <Button ref={openingBtn} /> */}
       </>
     </AnimatedPage>
   );

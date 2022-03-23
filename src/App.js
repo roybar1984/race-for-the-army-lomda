@@ -31,7 +31,6 @@ function App() {
       className={`App ${isStarted && "before-mission-background"} ${
         isPreMissionPages && "mission1-background"
       }`}
-      // className="App"
     >
       <Router>
         <AnimatePresence exitBeforeEnter initial={false}>
@@ -80,9 +79,7 @@ function App() {
                   setIsPreMissionPages={setIsPreMissionPages}
                 />
               }
-            >
-              {/* <IntroPage Data={Data} /> */}
-            </Route>
+            ></Route>
           </Routes>
         </AnimatePresence>
       </Router>

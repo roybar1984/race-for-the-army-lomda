@@ -6,13 +6,9 @@ import AnimatedPage from "../../components/AnimatedPage";
 import InfoIcon from "../../svg/infoIcon/InfoIcon";
 import HintIcon from "../../svg/hintIcon/HintIcon";
 import CloseBtn from "../../svg/closeBtn/CloseBtn";
-
-// import useWindowSize from "react-use/lib/useWindowSize";
 import Confetti from "react-confetti";
 
 function GamePage(props) {
-  // const { width, height } = useWindowSize();
-
   const arrLetters = [
     {
       question: "בטור הראשון של השמות, השם הראשון שמופיע, האות השנייה",
@@ -122,7 +118,6 @@ function GamePage(props) {
   const [isFinished, setIsFinished] = useState(false);
 
   const [showConfetti, setShowConfetti] = useState(false);
-  // const [isCorrect, setIsCorrect] = useState("");
 
   useEffect(() => {
     props.setIsPreMissionPages(false);
@@ -181,10 +176,7 @@ function GamePage(props) {
       {isFinished && showConfetti && (
         <Confetti width={window.innerWidth} height={window.innerHeight} />
       )}
-      <div
-        className="game-page-container"
-        // mission1-background"
-      >
+      <div className="game-page-container">
         <h1 className="game-title">
           {" "}
           <Markup content={props.title} />
@@ -196,18 +188,10 @@ function GamePage(props) {
               setIsInfoShowed={setIsInfoShowed}
             />
           )}
-
-          {/* <div
-            className={`info-icon ${
-              !isInfoShowed ? "display-btn" : "hint-icon-hidden "
-            }`}
-            onClick={() => setIsInfoShowed(true)}
-          ></div> */}
           <p
             className={`text-paragrapgh ${
               currText !== props.text && "question-text"
             }`}
-            //  className="text-paragrapgh"
           >
             <Markup content={currText} />
           </p>
@@ -236,7 +220,6 @@ function GamePage(props) {
                 className="close-hint-btn"
                 handleShowHint={handleShowHint}
               />
-              {/* <div className="close-hint-btn" onClick={handleShowHint}></div> */}
               <p className="hint-text">{currLetter.hint}</p>
             </div>
           )}
@@ -258,8 +241,6 @@ function GamePage(props) {
                 name="ssn-0"
                 isFinished={isFinished}
                 setIsFinished={setIsFinished}
-                // isCorrect={isCorrect}
-                // setIsCorrect={setIsCorrect}
               />
               <InputField
                 autoComplete="off"
@@ -275,8 +256,6 @@ function GamePage(props) {
                 name="ssn-1"
                 isFinished={isFinished}
                 setIsFinished={setIsFinished}
-                // isCorrect={isCorrect}
-                // setIsCorrect={setIsCorrect}
               />
               <InputField
                 autoComplete="off"
@@ -291,9 +270,6 @@ function GamePage(props) {
                 arrLetters={arrLetters}
                 name="ssn-2"
                 isFinished={isFinished}
-                setIsFinished={setIsFinished}
-                // isCorrect={isCorrect}
-                // setIsCorrect={setIsCorrect}
               />
             </div>
             <div className="letters-row low-row-letters">
@@ -311,8 +287,6 @@ function GamePage(props) {
                 name="ssn-3"
                 isFinished={isFinished}
                 setIsFinished={setIsFinished}
-                // isCorrect={isCorrect}
-                // setIsCorrect={setIsCorrect}
               />
               <InputField
                 className="letter-input letter4"
@@ -327,8 +301,6 @@ function GamePage(props) {
                 name="ssn-4"
                 isFinished={isFinished}
                 setIsFinished={setIsFinished}
-                // isCorrect={isCorrect}
-                // setIsCorrect={setIsCorrect}
               />
               <InputField
                 autoComplete="off"
@@ -344,8 +316,6 @@ function GamePage(props) {
                 name="ssn-5"
                 isFinished={isFinished}
                 setIsFinished={setIsFinished}
-                // isCorrect={isCorrect}
-                // setIsCorrect={setIsCorrect}
               />
               <InputField
                 autoComplete="off"
@@ -361,8 +331,6 @@ function GamePage(props) {
                 name="ssn-6"
                 isFinished={isFinished}
                 setIsFinished={setIsFinished}
-                // isCorrect={isCorrect}
-                // setIsCorrect={setIsCorrect}
               />
               <InputField
                 autoComplete="off"
@@ -378,8 +346,6 @@ function GamePage(props) {
                 name="ssn-7"
                 isFinished={isFinished}
                 setIsFinished={setIsFinished}
-                // isCorrect={isCorrect}
-                // setIsCorrect={setIsCorrect}
               />
               <InputField
                 autoComplete="off"
@@ -395,8 +361,6 @@ function GamePage(props) {
                 name="ssn-8"
                 isFinished={isFinished}
                 setIsFinished={setIsFinished}
-                // isCorrect={isCorrect}
-                // setIsCorrect={setIsCorrect}
               />
             </div>
           </div>

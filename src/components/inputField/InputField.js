@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./InputField.css";
 
 function InputField(props) {
-  // const numOfFields = 9;
   const [isCorrect, setIsCorrect] = useState();
   const [isClicked, setIsClicked] = useState(false);
 
@@ -37,7 +36,6 @@ function InputField(props) {
 
     //changing the specific inputField answer
     newArrAnswers[props.id].inputText = answer;
-    // props.setanswer(newArrAnswers);
 
     if (answer === props.arrLetters[props.id].answer) {
       //changing color of the input box

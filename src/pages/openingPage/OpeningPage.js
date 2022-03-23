@@ -57,8 +57,11 @@ function OpeningPage(props) {
   }, []);
 
   function handleStartLomda(event) {
-    props.setIsStarted(true);
-    setTimeout(navigate("./intro"), 1000);
+    //if the btn is vissible move to the rellevant page
+    if (event.target.style.opacity > 0.3) {
+      props.setIsStarted(true);
+      setTimeout(navigate("./intro"), 1000);
+    }
   }
 
   return (

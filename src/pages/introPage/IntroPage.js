@@ -75,14 +75,17 @@ function IntroPage(props) {
   };
 
   const handleClickPrevText = (event) => {
-    props.setTextIndex(3);
-    navigate("/intro", { replace: true });
-    props.setIsHidden("hidden");
-    setTimeout(function () {
-      props.setIsHidden((prevState) => {
-        prevState = "";
-      });
-    }, props.wait);
+    //if the btn is vissible move to the rellevant page
+    if (event.target.style.opacity > 0.3) {
+      props.setTextIndex(3);
+      navigate("/intro", { replace: true });
+      props.setIsHidden("hidden");
+      setTimeout(function () {
+        props.setIsHidden((prevState) => {
+          prevState = "";
+        });
+      }, props.wait);
+    }
   };
   return (
     <AnimatedPage>

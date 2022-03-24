@@ -7,6 +7,7 @@ import Character from "../../components/character/Character";
 import { Markup } from "interweave";
 import AnimatedPage from "../../components/AnimatedPage";
 import { motion } from "framer-motion";
+import Button from "../../components/Button/Button";
 
 function IntroPage(props) {
   const blackDivRef = useRef();
@@ -70,24 +71,25 @@ function IntroPage(props) {
     }
   };
 
-    useEffect(() => {
-      props.setIsHidden("hidden");
-      props.setTextIndex(1);
+  useEffect(() => {
+    console.log("inside the first useState");
+    props.setIsHidden("hidden");
+    props.setTextIndex(1);
+    props.setIsPreMissionPages(false);
+    props.setIsStarted(true);
+
+    setTimeout(function () {
+      props.setIsHidden((prevState) => {
+        prevState = "";
+      });
+    }, props.wait);
+
+    return () => {
       props.setIsPreMissionPages(false);
       props.setIsStarted(true);
-
-      setTimeout(function () {
-        props.setIsHidden((prevState) => {
-          prevState = "";
-        });
-      }, props.wait);
-
-      return () => {
-        props.setIsPreMissionPages(false);
-        props.setIsStarted(true);
-        props.setTextIndex(1);
-      };
-    }, []);
+      props.setTextIndex(1);
+    };
+  }, []);
   return (
     <AnimatedPage>
       <div className="bubble-container">
@@ -122,17 +124,18 @@ function IntroPage(props) {
           />
         )}
         {!props.Data[props.textIndex].btnText ? (
-          <motion.div
-            variants={btnAnimations}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            transition={{ duration: 2, delay: 9 }}
-            className="next-btn"
-            onClick={handleClickNext}
-          >
-            {" "}
-          </motion.div>
+          // <motion.div
+          //   variants={btnAnimations}
+          //   initial="initial"
+          //   animate="animate"
+          //   exit="exit"
+          //   transition={{ duration: 2, delay: 9 }}
+          //   className="next-btn"
+          //   onClick={handleClickNext}
+          // >
+          //   {" "}
+          // </motion.div>
+          <Button handleClickNext={handleClickNext}></Button>
         ) : (
           props.Data[props.textIndex].btnText && (
             <motion.button

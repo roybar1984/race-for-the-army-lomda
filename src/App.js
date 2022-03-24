@@ -18,7 +18,7 @@ function App() {
     setIsHidden("hidden");
     setTextIndex(1);
     setIsPreMissionPages(false);
-    setIsStarted(false);
+    // setIsStarted(false);
     return () => {
       setIsPreMissionPages(false);
       setIsStarted(true);

@@ -5,20 +5,22 @@ import { gsap } from "gsap";
 // import TypeWriterEffect from "react-typewriter-effect";
 
 function SpeechBubble(props) {
+  const { text, animationY, duration, delay, textIndex, title, className } =
+    props;
   const bubbleRef = useRef();
-  const [currText, setCurrText] = useState(props.text);
+  const [currText, setCurrText] = useState(text);
 
   useEffect(() => {
-    setCurrText(props.text);
+    setCurrText(text);
 
     gsap.from(bubbleRef.current, {
       opacity: 0,
-      y: props.animationY,
-      duration: props.duration,
-      delay: props.delay,
+      y: animationY,
+      duration: duration,
+      delay: delay,
       ease: "sine",
     });
-  }, [props.textIndex]);
+  }, [textIndex]);
 
   // const animations = {
   //   initial: { opacity: 0, y: props.animationY },
@@ -26,9 +28,9 @@ function SpeechBubble(props) {
   //   exit: { opacity: 0 },
   // };
   return (
-    <div ref={bubbleRef} className={`speech-bubble ${props.className}`}>
+    <div ref={bubbleRef} className={`speech-bubble ${className}`}>
       <p className="bubble-title">
-        <Markup content={props.title} />
+        <Markup content={title} />
       </p>
 
       <div className="bubble-text">

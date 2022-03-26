@@ -89,7 +89,7 @@ function IntroPage(props) {
       props.setIsStarted(true);
       props.setTextIndex(1);
     };
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <AnimatedPage>
       <div className="bubble-container">

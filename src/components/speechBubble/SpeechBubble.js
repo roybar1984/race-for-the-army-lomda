@@ -5,12 +5,15 @@ import { gsap } from "gsap";
 // import TypeWriterEffect from "react-typewriter-effect";
 
 function SpeechBubble(props) {
-  const { text, animationY, duration, delay, textIndex, title, className } =
-    props;
+  const { text, title, className } = props;
   const bubbleRef = useRef();
   const [currText, setCurrText] = useState(text);
 
   useEffect(() => {
+    const animationY = props.animationY;
+    const duration = props.duration;
+    const delay = props.delay;
+
     setCurrText(text);
 
     gsap.from(bubbleRef.current, {
@@ -20,7 +23,7 @@ function SpeechBubble(props) {
       delay: delay,
       ease: "sine",
     });
-  }, [textIndex]);
+  }, [props.textIndex]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // const animations = {
   //   initial: { opacity: 0, y: props.animationY },

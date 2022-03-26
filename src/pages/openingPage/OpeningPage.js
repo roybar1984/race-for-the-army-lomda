@@ -54,7 +54,7 @@ function OpeningPage(props) {
   useEffect(() => {
     props.setIsPreMissionPages(false);
     props.setIsStarted(false);
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   function handleStartLomda(event) {
     //if the btn is vissible move to the rellevant page

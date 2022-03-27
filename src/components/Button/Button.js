@@ -15,7 +15,7 @@ function Button(props) {
         initial="initial"
         animate="animate"
         exit="exit"
-        transition={{ duration: 2, delay: 9 }}
+        transition={{ duration: 2, delay: 7 }}
         className="next-btn"
         onClick={props.handleClickNext}
       >

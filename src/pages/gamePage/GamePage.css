@@ -232,8 +232,8 @@
   height: 30vh;
   background-color: white;
   position: absolute;
-  bottom: -3vh;
-  height: 41vh;
+  bottom: -4vh;
+  height: 44vh;
   border-radius: 2em;
   display: flex;
   flex-direction: row;
@@ -320,8 +320,8 @@
   .game-title {
     /* position: relative; */
     width: 90%;
-    font-size: 13vw;
-    margin-top: 5vh;
+    font-size: 12vw;
+    margin-top: 2vh;
     margin-bottom: 2vh;
     /* top: 0.01vh; */
     /* top: -4vh; */
@@ -359,14 +359,15 @@
     padding-bottom: 4em;
     min-height: 30vh;
     position: absolute;
-    bottom: 33vh;
+    bottom: 31vh;
     right: 0;
     /* top: 39vh; */
   }
 
   .text-paragrapgh {
     width: 95%;
-    font-size: 6vw;
+    /* font-size: 6vw; */
+    font-size: 5.8vw;
   }
 
   .letter-container {
@@ -499,7 +500,7 @@
     min-height: 18vh;
     height: 17vh;
     position: absolute;
-    top: 42vh;
+    top: 37vh;
     right: 4.5vw;
   }
 

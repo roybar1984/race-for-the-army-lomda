@@ -120,7 +120,7 @@ function IntroPage(props) {
             text={props.Data[props.textIndex].bubbleText2}
             className={`bottom-bubble ${
               props.isPreMissionPages && "pre-mission-bubbles "
-            }`}
+            } ${props.textIndex === 4 && "feel-ready-bubble"}`}
           />
         )}
         {!props.Data[props.textIndex].btnText ? (

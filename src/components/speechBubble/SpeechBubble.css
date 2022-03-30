@@ -135,12 +135,17 @@
   }
 
   .bottom-bubble {
-    top: -13vh;
+    top: -15vh;
     /* left: -6vw; */
   }
 
   .pre-mission-bubbles {
     height: 23vh;
     margin-top: 0vh;
+  }
+
+  .feel-ready-bubble {
+    width: 60vw;
+    height: 17vh;
   }
 }

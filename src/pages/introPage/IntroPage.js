@@ -149,7 +149,7 @@ function IntroPage(props) {
               initial="initial"
               animate="animate"
               exit="exit"
-              transition={{ duration: 2, delay: 6.5 }}
+              transition={{ duration: 2, delay: 6 }}
             >
               {props.Data[props.textIndex].btnText}
             </motion.button>
@@ -161,7 +161,7 @@ function IntroPage(props) {
             initial="initial"
             animate="animate"
             exit="exit"
-            transition={{ duration: 2, delay: 6.5 }}
+            transition={{ duration: 2, delay: 6 }}
             className="back-to-explenation-btn"
             onClick={handleClickPrevText}
           >

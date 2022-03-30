@@ -138,7 +138,7 @@ function GamePage(props) {
 
   useEffect(() => {
     if (isFinished) {
-      setCurrText(props.finishText);
+      setCurrText("");
       // setShowConfetti(true);
       // setTimeout(function () {
       //   setShowConfetti(false);

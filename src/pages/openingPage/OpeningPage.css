@@ -35,7 +35,7 @@
   margin-bottom: 20vh;
 }
 
-@media only screen and (max-width: 690px) {
+@media only screen and (max-width: 768px) {
   .titles-container {
     display: flex;
     flex-direction: column;

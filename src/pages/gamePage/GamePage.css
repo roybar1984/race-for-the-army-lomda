@@ -51,7 +51,7 @@
   width: 95%;
   font-size: 1.5vw;
   position: relative;
-  top: -1vh;
+  top: -3vh;
   font-family: normal-text;
 }
 
@@ -232,13 +232,14 @@
   height: 30vh;
   background-color: white;
   position: absolute;
-  bottom: -3vh;
-  height: 41vh;
+  bottom: -7vh;
+  height: 45vh;
   border-radius: 2em;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding-top: 0.5rem;
 }
 
 .question-text {
@@ -316,12 +317,12 @@
   }
 }
 
-@media only screen and (max-width: 690px) {
+@media only screen and (max-width: 768px) {
   .game-title {
     /* position: relative; */
     width: 90%;
     font-size: 13vw;
-    margin-top: 5vh;
+    margin-top: 0vh;
     margin-bottom: 2vh;
     /* top: 0.01vh; */
     /* top: -4vh; */
@@ -346,7 +347,7 @@
     bottom: 33vh; */
 
     width: 93%;
-    height: 36vh;
+    height: 44vh;
     /* border: solid #0000ff; */
     border-radius: 2rem;
     padding: 0.3em 1em;
@@ -359,8 +360,11 @@
     padding-bottom: 4em;
     min-height: 30vh;
     position: absolute;
-    bottom: 33vh;
+    bottom: 22vh;
     right: 0;
+    /* top: 39vh; */
+    padding-top: 0.3rem;
+    padding-bottom: 5rem;
     /* top: 39vh; */
   }
 

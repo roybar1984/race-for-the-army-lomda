@@ -100,7 +100,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 690px) {
+@media only screen and (max-width: 768px) {
   .opening-title2 {
     font-size: 10vw;
     margin-top: 0;

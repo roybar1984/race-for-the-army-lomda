@@ -135,7 +135,10 @@ function IntroPage(props) {
           // >
           //   {" "}
           // </motion.div>
-          <Button handleClickNext={handleClickNext}></Button>
+          <Button
+            textIndex={props.textIndex}
+            handleClickNext={handleClickNext}
+          ></Button>
         ) : (
           props.Data[props.textIndex].btnText && (
             <motion.button

@@ -33,6 +33,10 @@
   top: -3vh;
 }
 
+.next-btn-higher {
+  top: -5vh;
+}
+
 .mission-title {
   position: relative;
   font-size: 13vw;

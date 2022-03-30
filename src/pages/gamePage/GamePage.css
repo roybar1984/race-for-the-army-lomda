@@ -370,7 +370,8 @@
 
   .text-paragrapgh {
     width: 95%;
-    font-size: 6vw;
+    /* font-size: 6vw; */
+    font-size: 5.8vw;
   }
 
   .letter-container {
@@ -503,7 +504,7 @@
     min-height: 18vh;
     height: 17vh;
     position: absolute;
-    top: 42vh;
+    top: 37vh;
     right: 4.5vw;
   }
 

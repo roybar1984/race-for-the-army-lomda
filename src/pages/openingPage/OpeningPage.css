@@ -39,7 +39,7 @@
   .titles-container {
     display: flex;
     flex-direction: column;
-    margin-top: 9vh;
+    margin-top: 0vh;
     height: 30vh;
   }
 

@@ -232,7 +232,7 @@
   height: 30vh;
   background-color: white;
   position: absolute;
-  bottom: -7vh;
+  bottom: -9vh;
   height: 45vh;
   border-radius: 2em;
   display: flex;
@@ -361,10 +361,10 @@
     padding-bottom: 4em;
     min-height: 30vh;
     position: absolute;
-    bottom: 20vh;
+    bottom: 18vh;
     right: 0;
     /* top: 39vh; */
-    padding-top: 0.3rem;
+    padding-top: 1.3rem;
     padding-bottom: 5rem;
     /* top: 39vh; */
   }
@@ -505,7 +505,7 @@
     min-height: 18vh;
     height: 17vh;
     position: absolute;
-    top: 40vh;
+    top: 43vh;
     right: 4.5vw;
   }
 

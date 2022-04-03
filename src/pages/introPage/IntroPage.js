@@ -113,7 +113,7 @@ function IntroPage(props) {
 
         {props.Data[props.textIndex].bubbleText2 && (
           <SpeechBubble
-            delay={5}
+            delay={3}
             duration={2}
             animationY={80}
             textIndex={props.textIndex}
@@ -152,7 +152,7 @@ function IntroPage(props) {
               initial="initial"
               animate="animate"
               exit="exit"
-              transition={{ duration: 2, delay: 6 }}
+              transition={{ duration: 1.5, delay: 4 }}
             >
               {props.Data[props.textIndex].btnText}
             </motion.button>
@@ -164,7 +164,7 @@ function IntroPage(props) {
             initial="initial"
             animate="animate"
             exit="exit"
-            transition={{ duration: 2, delay: 6 }}
+            transition={{ duration: 1.5, delay: 4 }}
             className="back-to-explenation-btn"
             onClick={handleClickPrevText}
           >

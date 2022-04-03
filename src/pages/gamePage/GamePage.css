@@ -21,6 +21,7 @@
   color: #d3e6f7;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+  z-index: 1;
   /* color: rgba(247, 242, 242, 0.94); */
   /* top: -7vh; */
   /* top: 0vh; */

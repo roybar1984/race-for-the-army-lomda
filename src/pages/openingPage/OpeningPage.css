@@ -85,5 +85,7 @@
     font-size: 8vw;
     position: relative;
     top: 9vh;
+    min-width: 48vw;
+    width: fit-content;
   }
 }

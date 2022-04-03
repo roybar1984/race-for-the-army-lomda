@@ -131,7 +131,8 @@
 
   .top-bubble {
     top: -10vh;
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
+    margin-top: 10vh;
   }
 
   .bottom-bubble {

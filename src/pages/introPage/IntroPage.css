@@ -31,6 +31,7 @@
   position: relative;
   right: 34vw;
   top: -3vh;
+  margin-bottom: 4vh;
 }
 
 .next-btn-higher {
@@ -72,10 +73,10 @@
   position: relative;
   /* top: 3vh; */
   top: 0vh;
-  min-width: 44vw;
   border: 1px solid #084365;
   /* padding: 10px; */
   box-shadow: 5px 10px #084365;
+  min-width: 48vw;
   width: fit-content;
 }
 

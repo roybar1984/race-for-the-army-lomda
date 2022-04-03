@@ -72,10 +72,11 @@
   position: relative;
   /* top: 3vh; */
   top: 0vh;
-  width: 44vw;
+  min-width: 44vw;
   border: 1px solid #084365;
   /* padding: 10px; */
   box-shadow: 5px 10px #084365;
+  width: fit-content;
 }
 
 .start-first-point-btn:active {
@@ -88,7 +89,7 @@
 .back-to-explenation-btn {
   position: relative;
   right: -16vw;
-  top: -6vh;
+  top: -7vh;
   font-size: 5.5vw;
 }
 

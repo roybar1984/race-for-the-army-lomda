@@ -33,6 +33,7 @@
 
 .start-lomda-btn {
   margin-bottom: 20vh;
+  width: fit-content;
 }
 
 @media only screen and (max-width: 768px) {

@@ -2,7 +2,8 @@
   position: absolute;
   /* top: 70vh; */
   bottom: 0vh;
-  right: 0vw;
+  /* right: 0vw; */
+  right: -8vw;
   width: 46vw;
   height: 26vh;
   transform: scaleX(-1);
@@ -10,11 +11,13 @@
 }
 
 .character-looks-to-the-right {
-  right: 0vw;
+  /* right: 0vw; */
+  right: -8vw;
 }
 
 .character-looks-to-the-left {
-  left: -2vw;
+  /* left: -2vw; */
+  left: -8vw;
   transform: scaleX(1);
 }
 

@@ -30,12 +30,13 @@
   transform: scaleX(-1);
   position: relative;
   right: 34vw;
-  top: -3vh;
+  top: -5vh;
   margin-bottom: 4vh;
 }
 
 .next-btn-higher {
-  top: -5vh;
+  /* top: -5vh; */
+  top: -8vh;
 }
 
 .mission-title {
@@ -63,7 +64,8 @@
 }
 
 .start-first-point-btn {
-  margin-bottom: 25vh;
+  margin-bottom: 32vh;
+  /* margin-bottom: 25vh; */
   font-family: bold-text;
   color: #0093e9;
   /* font-size: 7.3vw; */

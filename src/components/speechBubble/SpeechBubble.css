@@ -147,6 +147,7 @@
 
   .feel-ready-bubble {
     width: 60vw;
-    height: 17vh;
+    height: 12vh;
+    /* height: 17vh; */
   }
 }

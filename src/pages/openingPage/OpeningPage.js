@@ -27,16 +27,16 @@ function OpeningPage(props) {
           opacity: 0,
           scale: 0,
           ease: "sine",
-          duration: 1.7,
+          duration: 1.5,
         },
-        "-=0.5"
+        "-=0.3"
       )
       .from(
         titlesContainerRef.current,
         {
           y: 70,
           ease: "sine",
-          duration: 1.5,
+          duration: 1,
         },
         ">"
       )
@@ -45,9 +45,9 @@ function OpeningPage(props) {
         {
           opacity: 0,
           ease: "sine",
-          duration: 2,
+          duration: 3,
         },
-        "+=0.5"
+        "+=0.3"
       );
   }, []);
 

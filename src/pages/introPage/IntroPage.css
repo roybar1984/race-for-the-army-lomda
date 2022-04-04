@@ -82,6 +82,7 @@
   min-width: 21vw;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: #f1f6f9bb;
 }
 
 .start-first-point-btn:active {
@@ -96,7 +97,20 @@
   right: -16vw;
   top: -9vh;
   font-size: 5.5vw;
+  padding: 0.2em 0;
   font-weight: 900;
+  font-family: bold-text;
+  color: #0093e9;
+  /* font-size: 4vw; */
+  min-width: 31vw;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: solid rgba(82, 82, 82, 0.659);
+  box-shadow: 5px 10px #084365;
+  border-radius: 2em;
+  background-color: #ffffffc8;
 }
 
 @media only screen and (max-width: 768px) {

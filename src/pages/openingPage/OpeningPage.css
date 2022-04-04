@@ -45,6 +45,7 @@
   top: 30vh;
   border: solid rgba(82, 82, 82, 0.659);
   box-shadow: 5px 10px #084365;
+  background-color: #ffffffc8;
 }
 
 @media only screen and (max-width: 768px) {

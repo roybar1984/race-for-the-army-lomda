@@ -275,7 +275,7 @@
   min-height: 18vh;
   height: 23vh;
   position: absolute;
-  top: 27vh;
+  top: 22vh;
   right: 5.5vw;
   background-color: #bce5fd;
   border: 1px solid #084365;
@@ -365,7 +365,7 @@
     right: 0;
     /* top: 39vh; */
     padding-top: 1.3rem;
-    padding-bottom: 5rem;
+    padding-bottom: 5.5rem;
     /* top: 39vh; */
   }
 

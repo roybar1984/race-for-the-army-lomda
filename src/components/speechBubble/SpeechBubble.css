@@ -13,10 +13,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 20rem;
-  width: 50vw;
-  /* padding: 1.125em 1.5em; */
-  height: 30vh;
+  border-radius: 11rem;
+  width: 55vw;
+  padding: 1.125em 1.5em;
+  height: 36vh;
 }
 
 .speech-bubble:after {
@@ -91,6 +91,15 @@
 
   .speech-bubble {
     position: relative;
+    background: #d3e6f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20rem;
+    width: 50vw;
+    /* padding: 1.125em 1.5em; */
+    height: 30vh;
 
     /* top: -8vh; */
     /* background: #a5eaf0b6;

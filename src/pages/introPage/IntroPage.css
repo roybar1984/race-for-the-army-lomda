@@ -23,15 +23,15 @@
 }
 
 .next-btn {
-  background-image: url("../../media/images-lomda/nextBtn\ 15.32.30.png");
-  width: 13vw;
-  height: 7vh;
+  width: 8vw;
+  height: 8vh;
   background-size: 100% 100%;
   transform: scaleX(-1);
   position: relative;
-  right: 34vw;
-  top: -9vh;
+  right: 38vw;
+  top: 4vh;
   margin-bottom: 4vh;
+  background-image: url("../../media/images-lomda/nextBtn\ 15.32.30.png");
 }
 
 .next-btn-higher {
@@ -69,16 +69,18 @@
   font-family: bold-text;
   color: #0093e9;
   /* font-size: 7.3vw; */
-  font-size: 6.3vw;
-  min-height: 6vh;
+  font-size: 3.3vw;
+  min-height: 7vh;
+  height: -moz-fit-content;
   height: fit-content;
   position: relative;
   /* top: 3vh; */
-  top: 0vh;
+  top: 11vh;
   border: 1px solid #084365;
   /* padding: 10px; */
   box-shadow: 5px 10px #084365;
-  min-width: 48vw;
+  min-width: 21vw;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -94,6 +96,40 @@
   right: -16vw;
   top: -9vh;
   font-size: 5.5vw;
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 768px) {
+  .next-btn {
+    background-image: url("../../media/images-lomda/nextBtn\ 15.32.30.png");
+    width: 13vw;
+    height: 7vh;
+    background-size: 100% 100%;
+    transform: scaleX(-1);
+    position: relative;
+    right: 34vw;
+    top: -9vh;
+    margin-bottom: 4vh;
+  }
+
+  .start-first-point-btn {
+    margin-bottom: 32vh;
+    /* margin-bottom: 25vh; */
+    font-family: bold-text;
+    color: #0093e9;
+    /* font-size: 7.3vw; */
+    font-size: 6.3vw;
+    min-height: 6vh;
+    height: fit-content;
+    position: relative;
+    /* top: 3vh; */
+    top: 0vh;
+    border: 1px solid #084365;
+    /* padding: 10px; */
+    box-shadow: 5px 10px #084365;
+    min-width: 48vw;
+    width: fit-content;
+  }
 }
 
 /*

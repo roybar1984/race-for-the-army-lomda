@@ -6,9 +6,11 @@
 }
 
 .opening-titles {
-  font-family: title;
+  font-family: opening-title;
   color: #d3e6f7;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+  /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000; */
+  text-shadow: 12px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   /* border: solid #0695ed; */
 }
@@ -33,7 +35,16 @@
 
 .start-lomda-btn {
   margin-bottom: 20vh;
+  font-family: bold-text;
+  color: #0093e9;
+  font-size: 4vw;
+  position: relative;
+  min-width: 22vw;
   width: fit-content;
+  height: fit-content;
+  top: 30vh;
+  border: solid rgba(82, 82, 82, 0.659);
+  box-shadow: 5px 10px #084365;
 }
 
 @media only screen and (max-width: 768px) {
@@ -45,7 +56,7 @@
   }
 
   .opening-titles {
-    font-family: title;
+    font-family: opening-title;
   }
 
   .opening-title1 {

@@ -503,10 +503,11 @@
     height: -moz-fit-content;
     height: fit-content;
     min-height: 18vh;
-    height: 17vh;
+    /* height: 17vh; */
     position: absolute;
-    top: 43vh;
+    top: 40vh;
     right: 4.5vw;
+    /* height: fit-content; */
   }
 
   .hint-text {

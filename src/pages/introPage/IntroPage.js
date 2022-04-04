@@ -72,7 +72,6 @@ function IntroPage(props) {
   };
 
   useEffect(() => {
-    console.log("inside the first useState");
     props.setIsHidden("hidden");
     props.setTextIndex(1);
     props.setIsPreMissionPages(false);

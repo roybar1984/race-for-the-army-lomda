@@ -24,13 +24,14 @@
 
 .next-btn {
   background-image: url("../../media/images-lomda/nextBtn\ 15.32.30.png");
-  width: 13vw;
+  width: 5vw;
   height: 7vh;
   background-size: 100% 100%;
   transform: scaleX(-1);
   position: relative;
   right: 34vw;
   top: -3vh;
+  cursor: pointer;
 }
 
 .next-btn-higher {
@@ -39,7 +40,7 @@
 
 .mission-title {
   position: relative;
-  font-size: 13vw;
+  font-size: 6vw;
   width: 100%;
   top: -8vh;
   margin-bottom: 5vh;
@@ -55,24 +56,24 @@
   position: relative;
   /* top: -5vh; */
   top: -7vh;
-  right: -16vw;
+  right: -30vw;
   margin-bottom: 3vh;
-  /* font-size: 4vw; */
-  /* right: 30vw; */
+  cursor: pointer;
 }
 
 .start-first-point-btn {
   margin-bottom: 25vh;
   font-family: bold-text;
   color: #0093e9;
-  /* font-size: 7.3vw; */
-  font-size: 6.3vw;
+  cursor: pointer;
+  font-size: 3.3vw;
   min-height: 6vh;
+  height: -moz-fit-content;
   height: fit-content;
   position: relative;
   /* top: 3vh; */
-  top: 0vh;
-  width: 44vw;
+  top: 22vh;
+  width: 23vw;
   border: 1px solid #084365;
   /* padding: 10px; */
   box-shadow: 5px 10px #084365;
@@ -87,19 +88,63 @@
 
 .back-to-explenation-btn {
   position: relative;
-  right: -16vw;
+  right: -30vw;
   top: -6vh;
-  font-size: 5.5vw;
+  font-size: 2vw;
 }
 
-/*
-html {
-  line-height: 1.5;
-  font-weight: 300;
-  color: #192229;
-  background: linear-gradient(135deg, #f4f2f3, #bfc6d0);
+@media only screen and (max-width: 768px) {
+  .next-btn {
+    background-image: url("../../media/images-lomda/nextBtn\ 15.32.30.png");
+    width: 13vw;
+    height: 7vh;
+    background-size: 100% 100%;
+    transform: scaleX(-1);
+    position: relative;
+    right: 34vw;
+    top: -3vh;
+  }
+  .start-first-point-btn {
+    margin-bottom: 25vh;
+    font-family: bold-text;
+    color: #0093e9;
+    cursor: pointer;
+    font-size: 6.3vw;
+    min-height: 6vh;
+    height: fit-content;
+    position: relative;
+    /* top: 3vh; */
+    top: 0vh;
+    width: 44vw;
+    border: 1px solid #084365;
+    /* padding: 10px; */
+    box-shadow: 5px 10px #084365;
+  }
+  .mission-title {
+    position: relative;
+    font-size: 13vw;
+    width: 100%;
+    top: -8vh;
+    margin-bottom: 5vh;
+    margin-top: 10vh;
+    font-family: title;
+    color: aliceblue;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+  .back-to-explenation-btn {
+    position: relative;
+    right: -16vw;
+    top: -6vh;
+    font-size: 5.5vw;
+  }
+  .start-mission-btn {
+    margin: 0;
+    position: relative;
+    /* top: -5vh; */
+    top: -7vh;
+    right: -16vw;
+    margin-bottom: 3vh;
+    cursor: pointer;
+  }
 }
-
-body {
-  padding: 0 2rem;
-} */

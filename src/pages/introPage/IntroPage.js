@@ -124,17 +124,6 @@ function IntroPage(props) {
           />
         )}
         {!props.Data[props.textIndex].btnText ? (
-          // <motion.div
-          //   variants={btnAnimations}
-          //   initial="initial"
-          //   animate="animate"
-          //   exit="exit"
-          //   transition={{ duration: 2, delay: 9 }}
-          //   className="next-btn"
-          //   onClick={handleClickNext}
-          // >
-          //   {" "}
-          // </motion.div>
           <Button
             textIndex={props.textIndex}
             handleClickNext={handleClickNext}
@@ -143,7 +132,6 @@ function IntroPage(props) {
           props.Data[props.textIndex].btnText && (
             <motion.button
               onClick={handleClickNext}
-              // ref={openingBtn}
               className={`btns start-lomda-btn 
               ${props.isPreMissionPages && "start-mission-btn"} ${
                 props.textIndex === 2 && "start-first-point-btn"

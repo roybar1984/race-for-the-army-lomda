@@ -65,7 +65,6 @@ function GamePage(props) {
       id: 8,
     },
   ];
-  // const arrAnswers = ["ב", "י", "ת", "ג", "ו", "ל", "ו", "מ", "ב"];
 
   const [answers, setAnswers] = useState([
     {
@@ -117,12 +116,9 @@ function GamePage(props) {
   const [isHintShowed, setIsHintShowed] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
 
-  // const [showConfetti, setShowConfetti] = useState(false);
-
   useEffect(() => {
     props.setIsPreMissionPages(false);
     setIsFinished(false);
-    // setShowConfetti(false);
   }, [props]);
 
   useEffect(() => {
@@ -139,10 +135,6 @@ function GamePage(props) {
   useEffect(() => {
     if (isFinished) {
       setCurrText("");
-      // setShowConfetti(true);
-      // setTimeout(function () {
-      //   setShowConfetti(false);
-      // }, 5000);
     }
   }, [isFinished, props.finishText]);
 

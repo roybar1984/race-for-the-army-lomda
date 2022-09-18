@@ -85,10 +85,7 @@
   }
 
   .speech-bubble {
-    position: relative;
-    border-radius: 5rem;
-    width: 66vw;
-    padding: 1.5em 1em;
+    position: relative; 
   }
 
   .bubble-text {
@@ -117,11 +114,12 @@
 
   .top-bubble {
     top: -10vh;
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
+    margin-top: 10vh;
   }
 
   .bottom-bubble {
-    top: -15vh;
+    top: -14.5vh;
     /* left: -6vw; */
   }
 
@@ -132,6 +130,8 @@
 
   .feel-ready-bubble {
     width: 60vw;
-    height: 17vh;
+    height: 12vh;
+    padding-bottom: 1vh;
+    /* height: 17vh; */
   }
 }

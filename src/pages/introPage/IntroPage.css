@@ -35,7 +35,8 @@
 }
 
 .next-btn-higher {
-  top: -5vh;
+  /* top: -5vh; */
+  top: -12vh;
 }
 
 .mission-title {
@@ -62,7 +63,8 @@
 }
 
 .start-first-point-btn {
-  margin-bottom: 25vh;
+  margin-bottom: 32vh;
+  /* margin-bottom: 25vh; */
   font-family: bold-text;
   color: #0093e9;
   cursor: pointer;
@@ -72,11 +74,14 @@
   height: fit-content;
   position: relative;
   /* top: 3vh; */
-  top: 22vh;
-  width: 23vw;
+  top: 11vh;
   border: 1px solid #084365;
   /* padding: 10px; */
   box-shadow: 5px 10px #084365;
+  min-width: 21vw;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #f1f6f9bb;
 }
 
 .start-first-point-btn:active {

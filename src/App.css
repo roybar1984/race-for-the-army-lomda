@@ -1,4 +1,9 @@
 @font-face {
+  font-family: opening-title;
+  src: url(./fonts/ShmulikHasamba-Medium.otf);
+}
+
+@font-face {
   font-family: title;
   src: url(./fonts/benchmark-regular-fm.otf);
 }

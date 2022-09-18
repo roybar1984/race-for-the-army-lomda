@@ -227,7 +227,7 @@
   height: 30vh;
   background-color: white;
   position: absolute;
-  bottom: -7vh;
+  bottom: -9vh;
   height: 45vh;
   border-radius: 2em;
   display: flex;
@@ -270,7 +270,7 @@
   min-height: 18vh;
   height: 33vh;
   position: absolute;
-  top: 27vh;
+  top: 22vh;
   right: 5.5vw;
   background-color: #bce5fd;
   border: 1px solid #084365;
@@ -314,9 +314,10 @@
 
 @media only screen and (max-width: 768px) {
   .game-title {
-    /* position: relative; */
     width: 90%;
-    font-size: 13vw;
+    /* font-size: 13vw; */
+    font-size: 8vw;
+    /* width: 100%; */
     margin-top: 0vh;
     margin-bottom: 2vh;
     /* top: 0.01vh; */
@@ -364,11 +365,11 @@
     padding-bottom: 4em;
     min-height: 30vh;
     position: absolute;
-    bottom: 22vh;
+    bottom: 18vh;
     right: 0;
     /* top: 39vh; */
-    padding-top: 0.3rem;
-    padding-bottom: 5rem;
+    padding-top: 1.3rem;
+    padding-bottom: 5.5rem;
     /* top: 39vh; */
   }
 
@@ -496,10 +497,11 @@
     height: -moz-fit-content;
     height: fit-content;
     min-height: 18vh;
-    height: 17vh;
+    /* height: 17vh; */
     position: absolute;
-    top: 37vh;
+    top: 40vh;
     right: 4.5vw;
+    /* height: fit-content; */
   }
 
   .hint-text {

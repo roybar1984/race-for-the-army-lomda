@@ -15,7 +15,7 @@ function Button(props) {
         initial="initial"
         animate="animate"
         exit="exit"
-        transition={{ duration: 2, delay: 7 }}
+        transition={{ duration: 1.5, delay: 5 }}
         className={`next-btn ${props.textIndex === 3 && "next-btn-higher "}`}
         onClick={props.handleClickNext}
       >
